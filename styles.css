@@ -8,6 +8,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+  overflow-y: hidden;
 }
 h1 {
   font-size: 3em;
@@ -21,11 +22,13 @@ h3 {
 }
 
 header {
+  position: fixed;
   outline: 1px white solid;
   flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100vw;
 }
 
 .headerLinks {
@@ -50,15 +53,14 @@ main {
   flex: 16;
   display: flex;
   justify-content: space-between;
+  overflow-y: auto;
+  margin-top: 5.5em;
 }
 
 nav {
-  padding: 1em;
-  border-right: 1px solid white;
+  padding: 1em 2em;
   flex: 1.5;
-}
-
-nav {
+  position: fixed;
   font-style: italic;
 }
 
@@ -69,7 +71,8 @@ nav ul li {
 
 section {
   flex: 9;
-  padding: 0.5em;
+  margin-left: 15em;
+  padding: 0em 10em;
 }
 article {
   margin: 2em;

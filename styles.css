@@ -14,11 +14,22 @@ h1 {
   font-size: 3em;
   margin: 0;
 }
+article h2 {
+  font-size: 2em;
+}
+
 header h3 {
   text-decoration: none;
 }
 h3 {
   text-decoration: underline;
+  font-size: 3em;
+}
+h4 {
+  font-size: 2em;
+}
+p {
+  font-size: 1.5em;
 }
 
 header {
@@ -56,12 +67,16 @@ main {
   overflow-y: auto;
   margin-top: 5.5em;
 }
+.sesion ul li a {
+  font-size: 1.5em;
+}
 
 nav {
   padding: 1em 2em;
   flex: 1.5;
   position: fixed;
   font-style: italic;
+  font-size: 1.5em;
 }
 
 nav ul li {

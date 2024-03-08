@@ -1,4 +1,6 @@
-# Página HTML estática
+# Enunciado original
+
+## Página HTML estática
 
 Se trata de hacer una página web (no una _app_) con cierta complejidad, en un solo documento (más estilos) que tenga bastante estructura y un diseño lo mejor posible (según la destreza de cada uno). La web tiene que hacerte investigar formas de hacer ciertas cosas que hagas por primera vez. Si es la primera vez que usas HTML, haz algo que no sea demasiado difícil, pero si ya sabes HTML y CSS, aprovecha para ponerte a prueba con algo nuevo: grids, animaciones en CSS, etc.
 
@@ -10,9 +12,24 @@ El tema de la página es libre, pero he aquí algunas sugerencias:
 
 - **Apuntes**: Crea un documento con tus apuntes sobre el Posgrado (u otra cosa), con estilos buenos y una estructura pensada. Intenta poner muestras de código, links a recursos que hayas encontrado, un índice (quizás generado con Javascript?), etc.
 
-## Entregable
+### Entregable
 
 Para hacer esta práctica tienes que:
+
 - Hacer un fork de este repositorio.
-- Trabajar en tu *fork* haciendo commits regularmente (una práctica que aparece entera en un solo commit tendrá una nota muy baja o cero, hay que enseñar el proceso intermedio).
+- Trabajar en tu _fork_ haciendo commits regularmente (una práctica que aparece entera en un solo commit tendrá una nota muy baja o cero, hay que enseñar el proceso intermedio).
 - Al finalizar, descarga un ZIP y entrega en el Campus Online de UPC School (habrá una tarea para ello).
+
+# Práctica 1
+
+## Página estática de apuntes del posgrado Full-Stack Web Technologies
+
+### Acerca del autor
+
+**Autor**: Ferran Bals Moreno
+
+**Perfil de GitHub:** [franksparks](https://github.com/franksparks)
+
+### Acerca de la práctica
+
+Lorem Ipsum

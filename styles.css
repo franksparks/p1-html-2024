@@ -46,7 +46,7 @@ a:hover,
 a:active {
   text-decoration: underline;
   user-select: none;
-  color: blue;
+  color: #0096ff;
 }
 
 main {
@@ -74,15 +74,31 @@ section {
   margin-left: 15em;
   padding: 0em 10em;
 }
-article {
-  margin: 2em;
+
+.sesion {
+  padding: 1em;
+  margin: 2em 0em;
+  outline: 1px solid white;
 }
-article h3 {
-  margin: 1em;
+.sesion h3 {
+  margin: 0em 1em;
 }
-article p {
-  margin: 2em;
+.sesion h4 {
+  margin: 1em 3em;
+  text-decoration: underline;
 }
+
+.sesion p {
+  margin: 1em 6em;
+}
+
+.sesion ul {
+  margin: 1em 4em;
+}
+.fecha {
+  font-style: italic;
+}
+
 hr {
   height: 3px;
 }

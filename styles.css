@@ -19,11 +19,13 @@ header h3 {
 h3 {
   text-decoration: underline;
 }
+
 header {
   outline: 1px white solid;
   flex: 1;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .headerLinks {
@@ -31,7 +33,8 @@ header {
   align-items: center;
   justify-content: center;
   font-size: 1.2em;
-  margin: 0.5em;
+  margin-right: 1em;
+  font-weight: bold;
 }
 
 .headerLinks a,
@@ -42,31 +45,49 @@ a:active {
   user-select: none;
   color: blue;
 }
+
 main {
   flex: 16;
   display: flex;
   justify-content: space-between;
 }
+
 nav {
   padding: 1em;
   border-right: 1px solid white;
   flex: 1.5;
 }
+
 nav {
   font-style: italic;
 }
+
 nav ul li {
   font-style: normal;
   margin: 10px 0px;
 }
 
-article h2 {
-  text-decoration: under;
-}
 section {
   flex: 9;
   padding: 0.5em;
 }
+article {
+  margin: 2em;
+}
+article h3 {
+  margin: 1em;
+}
+article p {
+  margin: 2em;
+}
+hr {
+  height: 3px;
+}
+.important {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 footer {
   font-size: 1.5em;
   outline: 1px white solid;
@@ -75,6 +96,7 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
 footer a {
   margin: 0.5em;
 }

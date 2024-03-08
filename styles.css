@@ -7,16 +7,21 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  outline: 1px solid red;
   height: 100vh;
 }
 h1 {
-  font-size: 4em;
+  font-size: 3em;
   margin: 0;
+}
+header h3 {
+  text-decoration: none;
+}
+h3 {
+  text-decoration: underline;
 }
 header {
   outline: 1px white solid;
-  flex: 3;
+  flex: 1;
   display: flex;
   flex-direction: row;
 }
@@ -39,6 +44,28 @@ a:active {
 }
 main {
   flex: 16;
+  display: flex;
+  justify-content: space-between;
+}
+nav {
+  padding: 1em;
+  border-right: 1px solid white;
+  flex: 1.5;
+}
+nav {
+  font-style: italic;
+}
+nav ul li {
+  font-style: normal;
+  margin: 10px 0px;
+}
+
+article h2 {
+  text-decoration: under;
+}
+section {
+  flex: 9;
+  padding: 0.5em;
 }
 footer {
   font-size: 1.5em;

@@ -30,6 +30,6 @@ Para hacer esta práctica tienes que:
 
 **Perfil de GitHub:** [franksparks](https://github.com/franksparks)
 
-### Acerca de la práctica
+### Página desplegada
 
-Lorem Ipsum
+La página se ha desplegado con Vercel y se puede visitar en el siguiente [enlace](https://ferran-bals-posgrado-pr1.vercel.app/).

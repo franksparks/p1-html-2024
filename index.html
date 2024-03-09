@@ -399,26 +399,28 @@
             <ul>
               <li>
                 <span class="cssProp">id="id-del-elemento"</span> - Identifica a
-                un elemento.
+                <span class="important">un elemento.</span>
               </li>
               <li>
                 <span class="cssProp">class="clase-del-elemento"</span> -
-                Identifica a un grupo de elementos.
+                Identifica a
+                <span class="important">un grupo de elementos.</span>
               </li>
               <li>
-                <span class="cssProp">style="estilos-a-aplicar"</span> - Añade
-                estilos al elemento
+                <span class="cssProp">style="estilos-a-aplicar"</span> -
+                <span class="important">Añade estilos al elemento.</span>
               </li>
             </ul>
             <h5>Selectores</h5>
             <ul>
               <li>
                 <span class="cssProp">#"id-del-elemento"</span> - Referencia a
-                un id de un elemento.
+                un <span class="important">id de un elemento.</span>
               </li>
               <li>
                 <span class="cssProp">."clase-del-elemento"</span> - Referencia
-                a una clase de un grupo de elementos.
+                a una
+                <span class="important">clase de un grupo de elementos.</span>
               </li>
               <li>
                 <span class="cssProp">"tag"."clase-del-elemento"</span> -
@@ -466,29 +468,198 @@
                   >MDN Web Docs - Tables</a
                 >
               </li>
+              <li>
+                <a
+                  href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+                  target="_blank"
+                  >Flexbox</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes"
+                  target="_blank"
+                  >Atributos globales</a
+                >
+              </li>
             </ul>
           </fieldset>
+
           <fieldset id="html-3">
             <legend>4. HTML and CSS III</legend>
             <h4>Notas de la sesión</h4>
+            <h5>Pseudo clases y elementos</h5>
+            <p>
+              Hacen referencia a elementos y clases que vienen
+              <span class="important"
+                >identificados directamente por el navegador.</span
+              >
+            </p>
             <ul>
-              <li>Lorem Ipsum</li>
+              <li>
+                <span class="cssProp">::before</span> - Pseudo elemento que
+                identifica el
+                <span class="important"
+                  >elemento vacío anterior al elemento seleccionado.</span
+                >
+              </li>
+              <li>
+                <span class="cssProp">::before</span> - Pseudo elemento que
+                identifica el
+                <span class="important"
+                  >elemento vacío posterior al elemento seleccionado.</span
+                >
+              </li>
+              <li>
+                <span class="cssProp">:first-child</span> - Pseudo clase que
+                identifica el
+                <span class="important"
+                  >primer descendiente de su ancestro.</span
+                >
+              </li>
+              <li>
+                <span class="cssProp">:nth-child(n)</span> - Pseudo clase que
+                identifica
+                <span class="important"
+                  >un/unos descendiente/s de su ancestro, en base a una formula
+                  dada.</span
+                >
+              </li>
             </ul>
+            <h5>Variables CSS</h5>
+            <ul>
+              <li>
+                Permiten almacenar valores para reutilizarlos. Ideal para
+                definir <span class="important">paletas de colores.</span>
+              </li>
+            </ul>
+            <h5>La cascada</h5>
+            <p>Cómo se priorizan las reglas CSS:</p>
+            <ol>
+              <li>
+                <span class="important">Importance</span> (the !important
+                keyword).
+              </li>
+              <li>
+                <span class="important">Origin</span> (user-agent, user, author)
+                and layers (@layer, @import).
+              </li>
+              <li><span class="important">Specificity.</span></li>
+              <li><span class="important">Order of appearance.</span></li>
+            </ol>
+            <h5>Especificidad</h5>
+            <p>
+              Es un vector de cuatro números que nos permite analizar el peso de
+              las diferentes reglas CSS.
+            </p>
+            <ul class="important">
+              <li>
+                <span>elemento</span> -
+                <span class="codeLine">(0,0,0,1)</span>
+              </li>
+              <li>
+                <span>clase</span> -
+                <span class="codeLine">(0,0,1,0)</span>
+              </li>
+              <li>
+                <span>id</span> -
+                <span class="codeLine">(0,1,0,0)</span>
+              </li>
+              <li>
+                <span>inline style</span> -
+                <span class="codeLine">(1,0,0,0)</span>
+              </li>
+            </ul>
+            <div class="codeBlock">
+              <pre>
+h1                   /* (0, 0, 0, 1) */
+p em                 /* (0, 0, 0, 2) */
+.grape               /* (0, 0, 1, 0) */
+*.bright             /* (0, 0, 1, 0) */
+p.bright e.dark      /* (0, 0, 2, 2) */
+#id216               /* (0, 1, 0, 0) */
+div#sidebar *[href]  /* (0, 1, 1, 1) */
+nav#menu li#top      /* (0, 2, 0, 2) */
+            </pre
+              >
+            </div>
+            <p>
+              La palabra reservada <span class="important">!important</span> se
+              impone al resto y generaría su jerarquía propia.
+            </p>
+
+            <h5>DOM (Domain Object Model)</h5>
+            <p>
+              El DOM es la representación interna en memoria de la estructura
+              HTMl de la página./p>
+            </p>
+            <p>
+              El navegador lleva a cabo 4 tareas principales con un documento
+              HTML:
+            </p>
+            <ul class="important">
+              <li>Recuperar su texto (Fetch).</li>
+              <li>Analizar el texto (Parse).</li>
+              <li>Mostrarlo por pantalla.</li>
+              <li>Escuchar eventos que puedan producirse.</li>
+            </ul>
+            <p>
+              Mediante la variable <span class="codeLine">document</span>
+              <span class="important"
+                >JavaScript nos permite manipular el DOM de múltiples
+                maneras.</span
+              >
+            </p>
+
+            <h5>Element queries</h5>
+
+            <ul>
+              <li>
+                <span class="codeLine">getElementsByTagName("tag")</span> -
+                <span class="important">plural</span>
+                - Devuelve los elementos con el nombre especificado.
+              </li>
+              <li>
+                <span class="codeLine">getElementById("id")</span> -
+                <span class="important">singular</span>
+                - Devuelve el elemento con el id especificado.
+              </li>
+              <li>
+                <span class="codeLine">getElementsByClassName("class")</span> -
+                <span class="important">plural</span> - Devuelve los elementos
+                con la clase especificada.
+              </li>
+              <li>
+                <span class="codeLine">querySelector(sel)</span> - Devuelve el
+                primer elemento que cumpla el criterio especificado.
+              </li>
+              <li>
+                <span class="codeLine">querySelectorAll(sel)</span> - Devuelve
+                todos los elementos que cumplan con el criterio especificado.
+              </li>
+            </ul>
+
             <h4>Enlaces</h4>
             <ul>
               <li>
-                <a href="https://developer.mozilla.org/en-US/" target="_blank"
-                  >MDN Web Docs</a
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes"
+                  target="_blank"
+                  >MDN Web Docs - Pseudo clases</a
                 >
               </li>
               <li>
-                <a href="https://www.w3schools.com/" target="_blank"
-                  >W3 Schools</a
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements"
+                  target="_blank"
+                  >MDN Web Docs - Pseudo elementos</a
                 >
               </li>
               <li>
-                <a href="https://cssreference.io/" target="_blank"
-                  >CSS Reference</a
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade#complete_cascade_order"
+                  target="_blank"
+                  >La Cascada</a
                 >
               </li>
             </ul>

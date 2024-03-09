@@ -143,9 +143,6 @@ fieldset ul li {
   display: flex;
   justify-content: space-evenly;
 }
-.cssProp {
-  outline: 2px var(--code-color) solid;
-}
 
 pre {
   font-size: 2em;

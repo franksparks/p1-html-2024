@@ -88,6 +88,9 @@ nav ul li {
   font-style: normal;
   margin: 10px 0px;
 }
+.remove-bullet {
+  list-style-type: none;
+}
 
 section {
   flex: 9;

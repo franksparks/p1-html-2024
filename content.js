@@ -23,8 +23,10 @@ articles.forEach((article) => {
 
     subListItem.appendChild(anchor);
     subList.appendChild(subListItem);
+    subList.classList.add("remove-bullet");
   });
 
   listItem.appendChild(subList);
+  listItem.classList.add("remove-bullet");
   nav.appendChild(listItem);
 });

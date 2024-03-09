@@ -70,7 +70,7 @@
                 <span class="codeLine"
                   >git checkout -b "nombre-de-la-rama"</span
                 >
-                - crea una nueva rama en git
+                - crea una nueva rama en git.
               </li>
               <li>
                 <span class="codeLine">git status</span> - muestra el estado
@@ -87,7 +87,7 @@
               </li>
               <li>
                 <span class="codeLine">git log</span> - muestra el historial de
-                commits en el repositorio
+                commits en el repositorio.
               </li>
             </ul>
 
@@ -328,7 +328,7 @@
 
               <li>
                 Lo activamos mediante la propiedad CSS
-                <span class="codeLine"> display:flex</span>
+                <span class="codeLine"> display:flex</span>.
               </li>
               <li>
                 Aplicando
@@ -361,7 +361,7 @@
                 <span class="important">expandir los elementos</span> para que
                 utilicen el espacio disponible en proporción al peso que les
                 configuremos mediante
-                <span class="codeLine">flex: "peso-del-elemento"</span>
+                <span class="codeLine">flex: "peso-del-elemento"</span>.
               </li>
             </ul>
             <h5>Posicionamiento</h5>
@@ -592,7 +592,7 @@ nav#menu li#top      /* (0, 2, 0, 2) */
             <h5>DOM (Domain Object Model)</h5>
             <p>
               El DOM es la representación interna en memoria de la estructura
-              HTMl de la página./p>
+              HTMl de la página.
             </p>
             <p>
               El navegador lleva a cabo 4 tareas principales con un documento
@@ -611,9 +611,7 @@ nav#menu li#top      /* (0, 2, 0, 2) */
                 maneras.</span
               >
             </p>
-
             <h5>Element queries</h5>
-
             <ul>
               <li>
                 <span class="codeLine">getElementsByTagName("tag")</span> -
@@ -676,12 +674,95 @@ nav#menu li#top      /* (0, 2, 0, 2) */
           <fieldset id="ts-basics">
             <legend>5. TypeScript Basics</legend>
             <h4>Notas de la sesión</h4>
+            <p>
+              <span class="important">TypeScript</span> es una
+              <span class="important">capa por encima de JavaScript.</span>
+              Proporciona un
+              <span class="important"> sistema de tipos muy potente.</span>
+            </p>
             <ul>
-              <li>Lorem Ipsum</li>
+              <li>
+                El <span class="important">código resultante</span> es
+                <span class="important">JavaScript.</span>
+              </li>
+              <li>
+                Detecta
+                <span class="important"
+                  >errores de programación en tiempo de compilación.</span
+                >
+              </li>
+              <li>
+                Ayuda a los desarrolladores
+                <span class="important"
+                  >mostrando errores mientras programan.</span
+                >
+                También
+                <span class="important"
+                  >muestra posibles maneras de completar campos, métodos o
+                  parámetros.</span
+                >
+              </li>
+              <li>
+                Los <span class="important">tipos</span> en TypeScript son
+                <span class="important">immutables (obviamente).</span>
+              </li>
+              <li>
+                <span class="important"
+                  >Necesitamos indicar el tipo de las variables.</span
+                >
+                El <span class="important">tipo del resultado</span> suele estar
+                bien <span class="important">inferido por TypeScript</span>,
+                pero podemos especificarlo.
+              </li>
+              <li>
+                Podemos añadir <span class="important">?</span> a un parámetro
+                para indicar que tal vez no lo recibamos. También podemos
+                establecer un <span class="important">valor por defecto.</span>
+              </li>
+            </ul>
+            <h5>Buenas prácticas</h5>
+            <p>
+              Siempre
+              <span class="important"> comprobaremos que si algo es NaN </span>
+              mediante
+              <span class="codeLine">
+                Number.isNan("elemento-a-comprobar")</span
+              >
+            </p>
+            <h5>Conversión a boolean en TypeScript</h5>
+            <ul>
+              <li>
+                <span class="codeLine"> if (num) </span> - number -
+                <span class="important"> true cuando num no es cero</span>
+              </li>
+              <li>
+                <span class="codeLine"> if (str) </span> - string -
+                <span class="important"> true cuando str no está vacío</span>
+              </li>
+              <li>
+                <span class="codeLine"> if (obj) </span> - number -
+                <span class="important">
+                  true cuando obj no es null o undefined</span
+                >
+              </li>
             </ul>
             <h4>Enlaces</h4>
             <ul>
-              <li>Lorem Ipsum</li>
+              <li>
+                <a href="https://www.typescriptlang.org/" target="_blank"
+                  >TypeScript homepage</a
+                >
+              </li>
+              <li>
+                <a href="https://bun.sh/" target="_blank">Bun homepage</a>
+              </li>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Glossary/Primitive"
+                  target="_blank"
+                  >MDN Web Docs - Primitive types on TypeScript</a
+                >
+              </li>
             </ul>
           </fieldset>
           <fieldset id="ts-objects">

@@ -10,6 +10,7 @@ body {
   height: 100vh;
   overflow-y: hidden;
 }
+
 h1 {
   font-size: 3em;
   margin: 0;
@@ -18,18 +19,19 @@ article h2 {
   font-size: 2em;
 }
 
-header h3 {
-  text-decoration: none;
-}
 h3 {
-  text-decoration: underline;
+  text-decoration: none;
   font-size: 3em;
 }
+
 h4 {
   font-size: 2em;
 }
 p {
   font-size: 1.5em;
+}
+legend {
+  font-size: 3em;
 }
 
 header {
@@ -48,10 +50,9 @@ header {
   justify-content: center;
   font-size: 1.2em;
   margin-right: 1em;
-  font-weight: bold;
 }
 
-.headerLinks a,
+a,
 a:visited,
 a:hover,
 a:active {
@@ -66,9 +67,6 @@ main {
   justify-content: space-between;
   overflow-y: auto;
   margin-top: 5.5em;
-}
-.sesion ul li a {
-  font-size: 1.5em;
 }
 
 nav {
@@ -90,36 +88,41 @@ section {
   padding: 0em 10em;
 }
 
-.sesion {
+fieldset {
   padding: 1em;
   margin: 2em 0em;
-  outline: 1px solid white;
+  border: 3px solid white;
 }
-.sesion h3 {
+
+fieldset h3 {
   margin: 0em 1em;
 }
-.sesion h4 {
-  margin: 1em 3em;
+fieldset h4 {
+  margin: 0em 2em;
+  font-weight: 100;
   text-decoration: underline;
 }
 
-.sesion p {
-  margin: 1em 6em;
-}
-
-.sesion ul {
+fieldset ul {
   margin: 1em 4em;
 }
-.fecha {
-  font-style: italic;
+fieldset ul li {
+  font-size: 1.5em;
+  margin: 1em;
+}
+
+.codeLine {
+  border: 2px gray solid;
+  font-family: monospace;
+  padding: 3px;
 }
 
 hr {
   height: 3px;
 }
+
 .important {
-  font-weight: 700;
-  text-decoration: underline;
+  color: red;
 }
 
 footer {

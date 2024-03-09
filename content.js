@@ -18,10 +18,11 @@ articles.forEach((article) => {
 
   const subList = document.createElement("ul");
 
-  const subHeadings = article.querySelectorAll("h3");
+  const subHeadings = article.querySelectorAll("fieldset");
   subHeadings.forEach((subHeading) => {
     const subListItem = document.createElement("li");
-    subListItem.textContent = subHeading.textContent;
+
+    subListItem.textContent = subHeading.children[0].innerText;
     subList.appendChild(subListItem);
   });
 

@@ -32,20 +32,64 @@
         <article>
           <h2>Fundamentos</h2>
           <hr />
-          <div class="sesion">
-            <h3>1. Basic Git</h3>
-            <p class="fecha">Clase del 13/2</p>
-            <h4>Apuntes de la sesión</h4>
-            <p>
-              En un repositorio, podemos descargar el archivo ZIP que contiene
-              la última versión publicada. No obstante, este no contiene los
-              pasos intermedios. <br />Es ideal clonar SIEMPRE el repositorio
-              que sea de nuestro interés.
-            </p>
-            <p>
-              El <span class="important">REMOTE</span> es la fuente de la
-              verdad.
-            </p>
+          <fieldset>
+            <legend id="basic-git">1. Basic Git</legend>
+            <h4>Notas de la sesión</h4>
+            <ul>
+              <li>
+                <span class="important">Git</span> es un sistema de control de
+                versiones distribuido.
+              </li>
+              <li>
+                En un repositorio, podemos descargar el archivo
+                <span class="important">ZIP</span> que contiene la última
+                versión publicada. No obstante, este
+                <span class="important">no</span> contiene los pasos
+                intermedios.
+              </li>
+              <li>
+                Es ideal <span class="important">clonar</span> el repositorio
+                que sea de nuestro interés.
+              </li>
+              <li>
+                El <span class="important">remote</span> es la fuente de la
+                verdad.
+              </li>
+            </ul>
+            <h4>Comandos útiles</h4>
+            <ul>
+              <li>
+                <span class="codeLine">git clone "URL-del-repositorio"</span>
+                - clona el repositorio
+              </li>
+              <li>
+                <span class="codeLine">git init .</span> - Inicializa git en el
+                directorio actual.
+              </li>
+              <li>
+                <span class="codeLine"
+                  >git checkout -b "nombre-de-la-rama"</span
+                >
+                - crea una nueva rama en git
+              </li>
+              <li>
+                <span class="codeLine">git status</span> - muestra el estado
+                actual del repositorio de trabajo.
+              </li>
+
+              <li>
+                <span class="codeLine">git commit -m "mensaje"</span> - confirma
+                los cambios en staging.
+              </li>
+              <li>
+                <span class="codeLine">git push</span> - envía los cambios al
+                repositorio remoto.
+              </li>
+              <li>
+                <span class="codeLine">git log</span> - muestra el historial de
+                commits en el repositorio
+              </li>
+            </ul>
 
             <h4>Enlaces</h4>
             <ul>
@@ -53,34 +97,40 @@
                 <a href="https://git-scm.com/" target="_blank">Git homepage</a>
               </li>
             </ul>
-          </div>
-          <div class="sesion">
-            <h3>2. HTML and CSS I</h3>
-            <p class="fecha">Clase del 15/2</p>
-            <h4>Apuntes de la sesión</h4>
-            <p>
-              La sección <span class="important">HEAD</span> contiene la
-              metainformación. <br />La sección
-              <span class="important">BODY</span> contiene el cuerpo de nuestra
-              web. <br />Usaremos las
-              <span class="important">DevTools</span> del navegador para
-              analizar el DOM (Domain Object Model).
-            </p>
-            <p>
-              <span class="important"
-                >El Visual Studio Code es un browser!!!</span
-              >
-            </p>
-            <p>
-              Hay que estructurar el documento HTML correctamente y no caer en
-              la div madness, usando el tag adecuado para cada sección.
-            </p>
-            <p>
-              Se recomienda usar las unidades CSS
-              <span class="important">em</span> y
-              <span class="important">rem</span>, ya que son relativas.
-            </p>
-            <p>Las marcas CSS han de usarse como "sal y pimienta".</p>
+          </fieldset>
+
+          <fieldset>
+            <legend id="html-1">2. HTML and CSS I</legend>
+            <h4>Notas de la sesión</h4>
+            <ul>
+              <li>
+                La sección <span class="important">HEAD</span> contiene la
+                metainformación.
+              </li>
+              <li>
+                La sección <span class="important">BODY</span> contiene el
+                cuerpo de nuestra web.
+              </li>
+              <li>
+                Usaremos las <span class="important">DevTools</span> del
+                navegador para analizar el DOM (Domain Object Model).
+              </li>
+              <li>
+                <span class="important"
+                  >El Visual Studio Code es un browser!!!</span
+                >
+              </li>
+              <li>
+                Hay que estructurar el documento HTML correctamente y no caer en
+                la div madness, usando el tag adecuado para cada sección.
+              </li>
+              <li>
+                Se recomienda usar las unidades CSS
+                <span class="important">em</span> y
+                <span class="important">rem</span>, ya que son relativas.
+              </li>
+              <li>Las marcas CSS han de usarse como "sal y pimienta".</li>
+            </ul>
 
             <h4>Enlaces</h4>
             <ul>
@@ -100,39 +150,35 @@
                 >
               </li>
             </ul>
-          </div>
-          <div class="sesion">
-            <h3>3. HTML and CSS II</h3>
-            <p class="fecha">Clase del 20/2</p>
-          </div>
-          <div class="sesion">
-            <h3>4. HTML and CSS III</h3>
-            <p>Clase del 22/2</p>
-          </div>
-          <div class="sesion">
-            <h3>5. TypeScript Basics</h3>
-            <p>Clase del 27/2</p>
-          </div>
-          <div class="sesion">
-            <h3>6. Objects</h3>
-            <p>Clase del 27/2</p>
-          </div>
-          <div class="sesion">
-            <h3>7. Advanced Functions</h3>
-            <p>Clase del 29/2</p>
-          </div>
-          <div class="sesion">
-            <h3>8. Classes</h3>
-            <p>Clase del 5/3</p>
-          </div>
-          <div class="sesion">
-            <h3>9. Asynchrony</h3>
-            <p>Clase del 7/3</p>
-          </div>
-          <div class="sesion">
-            <h3>10. Modules</h3>
-            <p>Clase del 12/3</p>
-          </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>3. HTML and CSS II</legend>
+          </fieldset>
+          <fieldset>
+            <legend>4. HTML and CSS III</legend>
+          </fieldset>
+          <fieldset>
+            <legend>5. TypeScript Basics</legend>
+          </fieldset>
+          <fieldset>
+            <legend>6. Objects</legend>
+          </fieldset>
+          <fieldset>
+            <legend>7. Advanced Functions</legend>
+          </fieldset>
+          <fieldset>
+            <legend>8. Classes</legend>
+          </fieldset>
+          <fieldset>
+            <legend>9. Asynchrony</legend>
+          </fieldset>
+          <fieldset>
+            <legend>10. Modules</legend>
+            <ul>
+              <li>Lorem Ipsum</li>
+            </ul>
+          </fieldset>
         </article>
         <article>
           <h2>BackEnd</h2>
@@ -156,16 +202,37 @@
           </div>
         </article>
         <article>
-          <h2>Otros</h2>
+          <h2>Miscelánea</h2>
           <hr />
-          <p>Si podéis, evitad buscar en Google.</p>
-          <p>Una página web es una estructura de datos. El orden es crucial.</p>
-          <p>La programación lucha contra la repetición incesante.</p>
-          <p>Uno progresa si va descifrando errores.</p>
-          <p>
-            El código que escribimos no es para nosotros, es para otras
-            personas.
-          </p>
+          <fieldset>
+            <legend>Apuntes generales</legend>
+            <ul>
+              <li>
+                Si podéis,
+                <span class="important">evitad buscar en Google.</span>
+              </li>
+              <li>
+                Una página web es una estructura de datos.
+                <span class="important">El orden es crucial.</span>
+              </li>
+              <li>
+                La programación
+                <span class="important">lucha contra la repetición</span>
+                incesante.
+              </li>
+              <li>
+                Uno progresa si va
+                <span class="important">descifrando errores.</span>
+              </li>
+              <li>
+                <span class="important">Nuestro código</span> que escribimos no
+                es para nosotros,
+                <span class="important">es para otras personas.</span>
+              </li>
+            </ul>
+            <p></p>
+            <p></p>
+          </fieldset>
         </article>
       </section>
     </main>

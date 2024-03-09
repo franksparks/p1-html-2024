@@ -1,8 +1,3 @@
-/*import apuntes from "./apuntes.json" assert { type: "json" };
-
-console.log(apuntes);
-*/
-
 // Obtenemos los artículos del DOM
 const articles = document.querySelectorAll("#apuntes article");
 
@@ -10,7 +5,6 @@ const articles = document.querySelectorAll("#apuntes article");
 const nav = document.getElementById("index");
 
 // Obtenemos las temáticas y los títulos de las sesiones de cada temática para inyectarlos al índice
-
 articles.forEach((article) => {
   const heading = article.querySelector("h2").innerText;
   const listItem = document.createElement("li");
@@ -21,8 +15,13 @@ articles.forEach((article) => {
   const subHeadings = article.querySelectorAll("fieldset");
   subHeadings.forEach((subHeading) => {
     const subListItem = document.createElement("li");
+    const subSectionId = subHeading.id;
 
-    subListItem.textContent = subHeading.children[0].innerText;
+    const anchor = document.createElement("a");
+    anchor.textContent = subHeading.children[0].innerText;
+    anchor.href = `#${subSectionId}`;
+
+    subListItem.appendChild(anchor);
     subList.appendChild(subListItem);
   });
 

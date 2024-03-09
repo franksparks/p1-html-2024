@@ -32,8 +32,8 @@
         <article>
           <h2>Fundamentos</h2>
           <hr />
-          <fieldset>
-            <legend id="basic-git">1. Basic Git</legend>
+          <fieldset id="basic-git">
+            <legend>1. Basic Git</legend>
             <h4>Notas de la sesión</h4>
             <ul>
               <li>
@@ -99,10 +99,18 @@
             </ul>
           </fieldset>
 
-          <fieldset>
-            <legend id="html-1">2. HTML and CSS I</legend>
+          <fieldset id="html-1">
+            <legend>2. HTML and CSS I</legend>
             <h4>Notas de la sesión</h4>
+            <h5>HTML</h5>
+
             <ul>
+              <li>
+                <span class="important">HTML</span> (HyperText Markup Language)
+                es un lenguaje de marcado estándar utilizado para crear y
+                diseñar páginas web y aplicaciones web.
+              </li>
+
               <li>
                 La sección <span class="important">HEAD</span> contiene la
                 metainformación.
@@ -117,19 +125,44 @@
               </li>
               <li>
                 <span class="important"
-                  >El Visual Studio Code es un browser!!!</span
+                  >El Visual Studio Code es un browser!</span
                 >
               </li>
               <li>
-                Hay que estructurar el documento HTML correctamente y no caer en
-                la div madness, usando el tag adecuado para cada sección.
+                Hay que estructurar el documento HTML correctamente y
+                <span class="important">no caer en la div madness</span>, usando
+                el tag adecuado para cada sección.
+              </li>
+            </ul>
+            <h5>CSS</h5>
+            <ul>
+              <li>
+                <span class="important">CSS</span> (Cascading Style Sheets) es
+                un lenguaje utilizado para definir la presentación y el aspecto
+                visual de los documentos HTML.
               </li>
               <li>
                 Se recomienda usar las unidades CSS
                 <span class="important">em</span> y
                 <span class="important">rem</span>, ya que son relativas.
               </li>
-              <li>Las marcas CSS han de usarse como "sal y pimienta".</li>
+              <li>
+                <span class="important">Reglas CSS</span>: Selectores que
+                apuntan a elementos HTML, especificando propiedades a modificar
+                y valores a aplicar. Quién, qué, cómo.
+              </li>
+              <li>
+                Podemos definir
+                <span class="important">varias reglas por etiqueta HTML.</span>
+              </li>
+              <li>
+                Podemos especificar
+                <span class="important">varios tags por regla.</span>
+              </li>
+              <li>
+                Las marcas CSS han de usarse como
+                <span class="important">sal y pimienta.</span>
+              </li>
             </ul>
 
             <h4>Enlaces</h4>
@@ -152,29 +185,376 @@
             </ul>
           </fieldset>
 
-          <fieldset>
+          <fieldset id="html-2">
             <legend>3. HTML and CSS II</legend>
+            <h4>Notas de la sesión</h4>
+            <h5>Contenido incrustado</h5>
+            <ul>
+              <li>
+                Podemos definir
+                <span class="important">diferentes fuentes a una imagen</span>
+                para usarlas en base a una condición (como el tamaño de la
+                pantalla).
+              </li>
+              <li>
+                Los <span class="important">iframes</span> nos permiten
+                <span class="important">mezclar dos webs en una</span>,
+                incrustando una ventana en nuestra web.
+              </li>
+              <li>
+                Las <span class="important">imágenes SVG</span> son ideales para
+                <span class="important">iconos</span>, ya que no se les
+                especifica tamaño sino coordenadas.
+              </li>
+            </ul>
+            <h5>Listas</h5>
+            <p>Etiquetas HTML de las listas:</p>
+            <ul>
+              <li><span class="codeLine"> ol</span> - Lista ordenada</li>
+              <div class="codeBlock">
+                <pre>
+  &lt;ol&gt;
+      &lt;li&gt;First&lt;/li&gt;
+      &lt;li&gt;Second&lt;/li&gt;
+      &lt;li&gt;Third&lt;/li&gt;
+      &lt;li&gt;Fourth&lt;/li&gt;
+  &lt;/ol&gt;
+              </pre
+                >
+                <span class="verticalLine"></span>
+                <div>
+                  <ol>
+                    <li>First</li>
+                    <li>Second</li>
+                    <li>Third</li>
+                    <li>Fourth</li>
+                  </ol>
+                </div>
+              </div>
+
+              <li><span class="codeLine"> ul</span> - Lista sin orden</li>
+              <div class="codeBlock">
+                <pre>
+  &lt;ul&gt;
+      &lt;li&gt;First&lt;/li&gt;
+      &lt;li&gt;Second&lt;/li&gt;
+      &lt;li&gt;Third&lt;/li&gt;
+      &lt;li&gt;Fourth&lt;/li&gt;
+  &lt;/ul&gt;
+              </pre
+                >
+                <span class="verticalLine"></span>
+                <div>
+                  <ul>
+                    <li>First</li>
+                    <li>Second</li>
+                    <li>Third</li>
+                    <li>Fourth</li>
+                  </ul>
+                </div>
+              </div>
+              <li><span class="codeLine"> li</span> - Elemento de la lista</li>
+            </ul>
+            <h5>Tablas</h5>
+            <p>Etiquetas HTML de las tablas:</p>
+            <ul>
+              <li>
+                <span class="codeLine"> table</span> - Etiqueta principal de la
+                tabla
+              </li>
+              <li><span class="codeLine"> thead</span> - Header de la tabla</li>
+              <li><span class="codeLine"> tbody</span> - Cuerpo de la tabla</li>
+              <li>
+                <span class="codeLine"> th</span> - Header de columna de la
+                tabla
+              </li>
+              <li><span class="codeLine"> tr</span> - Fila de la tabla</li>
+              <li>
+                <span class="codeLine"> td</span> - Información de la celda
+              </li>
+
+              <div class="codeBlock">
+                <pre>
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Day of the week&lt;/th&gt;
+          &lt;th&gt;Mode&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Tuesday&lt;/td&gt;
+          &lt;td&gt;In person&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Thursday&lt;/td&gt;
+          &lt;td&gt;Online&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+                </pre>
+                <span class="verticalLine"></span>
+                <div class="code">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Day of the week</th>
+                        <th>Mode</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Tuesday</td>
+                        <td>In person</td>
+                      </tr>
+                      <tr>
+                        <td>Thursday</td>
+                        <td>Online</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </ul>
+
+            <h5>Flexbox</h5>
+            <ul>
+              <li>
+                <span class="important">Flexbox</span> nos permite organizar los
+                elementos en el
+                <span class="important">eje horizontal y vertical.</span>
+              </li>
+
+              <li>
+                Lo activamos mediante la propiedad CSS
+                <span class="cssProp"> display:flex</span>
+              </li>
+              <li>
+                Aplicando
+                <span class="cssProp">flex-direction:column</span>, resultará en
+                <span class="cssProp">justify-content</span> afectará al eje
+                vertical y <span class="cssProp">align-items</span> al eje
+                horizontal.
+              </li>
+              <li>
+                Aplicando
+                <span class="cssProp">flex-direction:row</span>, resultará en
+                <span class="cssProp">justify-content</span> afectará al eje
+                horizontal y <span class="cssProp">align-items</span> al eje
+                vertical.
+              </li>
+
+              <li>
+                <span class="cssProp">flex-end</span> y
+                <span class="cssProp">flex-start</span> :
+              </li>
+              <img src="./img/flexbox1.svg" width="1000" height="800" />
+
+              <li>
+                <span class="cssProp">stretch</span> y
+                <span class="cssProp">center</span> :
+              </li>
+              <img src="./img/flexbox2.svg" width="1000" height="800" />
+              <li>
+                Podemos
+                <span class="important">expandir los elementos</span> para que
+                utilicen el espacio disponible en proporción al peso que les
+                configuremos mediante
+                <span class="cssProp">flex: "peso-del-elemento"</span>
+              </li>
+            </ul>
+            <h5>Posicionamiento</h5>
+            <ul>
+              <li>
+                <span class="cssProp"> position: static</span> - Valor por
+                defecto,
+                <span class="important">posición natural del elemento.</span>
+              </li>
+              <li>
+                <span class="cssProp"> position: relative</span> - Nos permiten
+                <span class="important"
+                  >mover elementos en relación a su posición estática.</span
+                >
+              </li>
+              <li>
+                <span class="cssProp"> position: absolute</span> - El elemento
+                <span class="important"
+                  >se posiciona respecto al elemento precedesor "relative" más
+                  cercano.</span
+                >
+              </li>
+              <li>
+                <span class="cssProp"> position: fixed</span> - El elemento
+                <span class="important"
+                  >se posiciona respecto al documento HTML.</span
+                >
+              </li>
+              <li>
+                <span class="cssProp"> position: sticky</span> - Combinación
+                entre <span class="important">static y fixed.</span>
+              </li>
+            </ul>
+            <h5>Atributos globales</h5>
+            <ul>
+              <li>
+                <span class="cssProp">id="id-del-elemento"</span> - Identifica a
+                un elemento.
+              </li>
+              <li>
+                <span class="cssProp">class="clase-del-elemento"</span> -
+                Identifica a un grupo de elementos.
+              </li>
+              <li>
+                <span class="cssProp">style="estilos-a-aplicar"</span> - Añade
+                estilos al elemento
+              </li>
+            </ul>
+            <h5>Selectores</h5>
+            <ul>
+              <li>
+                <span class="cssProp">#"id-del-elemento"</span> - Referencia a
+                un id de un elemento.
+              </li>
+              <li>
+                <span class="cssProp">."clase-del-elemento"</span> - Referencia
+                a una clase de un grupo de elementos.
+              </li>
+              <li>
+                <span class="cssProp">"tag"."clase-del-elemento"</span> -
+                Referencia una etiqueta HTML que contenga además la clase
+                especificada.
+              </li>
+              <li>
+                <span class="cssProp">"tag"["atributo"]</span> - Referencia una
+                etiqueta HTML que contenga el atributo especificado.
+              </li>
+              <li>
+                <span class="cssProp">"tag"["atributo"]</span> - Referencia una
+                etiqueta HTML que contenga el atributo especificado, con el
+                valor indicado.
+              </li>
+              <li>
+                <span class="cssProp">"tag uno" + "tag dos"</span> - Referencia
+                al elemento a justo después de b.
+              </li>
+              <li>
+                <span class="cssProp">"tag uno" > "tag dos"</span> - Referencia
+                al elemento a con el elemento b como ancestro directo.
+              </li>
+            </ul>
+            <h4>Enlaces</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol"
+                  target="_blank"
+                  >MDN Web Docs - ol element</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul"
+                  target="_blank"
+                  >MDN Web Docs - ul element</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table"
+                  target="_blank"
+                  >MDN Web Docs - Tables</a
+                >
+              </li>
+            </ul>
           </fieldset>
-          <fieldset>
+          <fieldset id="html-3">
             <legend>4. HTML and CSS III</legend>
+            <h4>Notas de la sesión</h4>
+            <ul>
+              <li>Lorem Ipsum</li>
+            </ul>
+            <h4>Enlaces</h4>
+            <ul>
+              <li>
+                <a href="https://developer.mozilla.org/en-US/" target="_blank"
+                  >MDN Web Docs</a
+                >
+              </li>
+              <li>
+                <a href="https://www.w3schools.com/" target="_blank"
+                  >W3 Schools</a
+                >
+              </li>
+              <li>
+                <a href="https://cssreference.io/" target="_blank"
+                  >CSS Reference</a
+                >
+              </li>
+            </ul>
           </fieldset>
-          <fieldset>
+          <fieldset id="ts-basics">
             <legend>5. TypeScript Basics</legend>
+            <h4>Notas de la sesión</h4>
+            <ul>
+              <li>Lorem Ipsum</li>
+            </ul>
+            <h4>Enlaces</h4>
+            <ul>
+              <li>Lorem Ipsum</li>
+            </ul>
           </fieldset>
-          <fieldset>
+          <fieldset id="ts-objects">
             <legend>6. Objects</legend>
+            <h4>Notas de la sesión</h4>
+            <ul>
+              <li>Lorem Ipsum</li>
+            </ul>
+            <h4>Enlaces</h4>
+            <ul>
+              <li>Lorem Ipsum</li>
+            </ul>
           </fieldset>
-          <fieldset>
+          <fieldset id="advanced-functions">
             <legend>7. Advanced Functions</legend>
+            <h4>Notas de la sesión</h4>
+            <ul>
+              <li>Lorem Ipsum</li>
+            </ul>
+            <h4>Enlaces</h4>
+            <ul>
+              <li>Lorem Ipsum</li>
+            </ul>
           </fieldset>
-          <fieldset>
+          <fieldset id="classes">
             <legend>8. Classes</legend>
+            <h4>Notas de la sesión</h4>
+            <ul>
+              <li>Lorem Ipsum</li>
+            </ul>
+            <h4>Enlaces</h4>
+            <ul>
+              <li>Lorem Ipsum</li>
+            </ul>
           </fieldset>
-          <fieldset>
+          <fieldset id="async">
             <legend>9. Asynchrony</legend>
+            <h4>Notas de la sesión</h4>
+            <ul>
+              <li>Lorem Ipsum</li>
+            </ul>
+            <h4>Enlaces</h4>
+            <ul>
+              <li>Lorem Ipsum</li>
+            </ul>
           </fieldset>
-          <fieldset>
+          <fieldset id="modules">
             <legend>10. Modules</legend>
+            <h4>Notas de la sesión</h4>
+            <ul>
+              <li>Lorem Ipsum</li>
+            </ul>
+            <h4>Enlaces</h4>
             <ul>
               <li>Lorem Ipsum</li>
             </ul>

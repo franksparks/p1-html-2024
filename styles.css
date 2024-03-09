@@ -1,3 +1,10 @@
+:root {
+  --border-color: white;
+  --link-color: #0096ff;
+  --important-color: red;
+  --code-color: green;
+  --css-prop-color: yellow;
+}
 body {
   background-color: #000000;
   color: #f5f5f5;
@@ -36,7 +43,7 @@ legend {
 
 header {
   position: fixed;
-  outline: 1px white solid;
+  outline: 2px var(--border-color) solid;
   flex: 1;
   display: flex;
   flex-direction: row;
@@ -58,7 +65,7 @@ a:hover,
 a:active {
   text-decoration: underline;
   user-select: none;
-  color: #0096ff;
+  color: var(--link-color);
 }
 
 main {
@@ -91,7 +98,7 @@ section {
 fieldset {
   padding: 1em;
   margin: 2em 0em;
-  border: 3px solid white;
+  border: 3px solid var(--border-color);
 }
 
 fieldset h3 {
@@ -103,6 +110,15 @@ fieldset h4 {
   text-decoration: underline;
 }
 
+fieldset h5 {
+  margin: 0.5em 4em;
+  font-size: 1.5em;
+}
+fieldset p {
+  margin: 0.5em 4em;
+  font-size: 1.5em;
+}
+
 fieldset ul {
   margin: 1em 4em;
 }
@@ -111,10 +127,28 @@ fieldset ul li {
   margin: 1em;
 }
 
-.codeLine {
-  border: 2px gray solid;
+.codeLine,
+.codeBlock {
+  border: 2px var(--code-color) solid;
   font-family: monospace;
-  padding: 3px;
+}
+
+.codeBlock {
+  display: flex;
+  justify-content: space-evenly;
+}
+.cssProp {
+  outline: 2px var(--code-color) solid;
+}
+
+pre {
+  font-size: 2em;
+}
+.verticalLine {
+  border-right: 2px solid var(--code-color);
+}
+.code {
+  font-size: 2em;
 }
 
 hr {
@@ -122,12 +156,12 @@ hr {
 }
 
 .important {
-  color: red;
+  color: var(--important-color);
 }
 
 footer {
   font-size: 1.5em;
-  outline: 1px white solid;
+  outline: 2px var(--border-color) solid;
   flex: 1;
   display: flex;
   align-items: center;

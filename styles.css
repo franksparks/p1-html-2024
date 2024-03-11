@@ -5,6 +5,7 @@
   --code-color: green;
   --css-prop-color: yellow;
 }
+
 body {
   background-color: #000000;
   color: #f5f5f5;
@@ -22,6 +23,7 @@ h1 {
   font-size: 3em;
   margin: 0;
 }
+
 article h2 {
   font-size: 2em;
 }
@@ -34,9 +36,11 @@ h3 {
 h4 {
   font-size: 2em;
 }
+
 p {
   font-size: 1.5em;
 }
+
 legend {
   font-size: 3em;
 }
@@ -71,7 +75,7 @@ a:active {
 main {
   flex: 16;
   display: flex;
-  flex-direction: row;
+  flex-direction: row wrap;
   justify-content: space-between;
   overflow-y: auto;
 }
@@ -79,30 +83,37 @@ main {
 nav {
   font-style: italic;
   font-size: 1.5em;
-  flex: 1;
   padding: 1em;
-}
-section {
-  flex: 7;
-  display: flex;
-  flex-direction: column;
+  flex: 1;
+  display: block;
 }
 
 nav ul li {
   font-style: normal;
   margin: 10px 0px;
 }
+
+section {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+}
+
 .remove-bullet {
   list-style-type: none;
 }
 
 fieldset {
   border: 3px solid var(--border-color);
+  margin: 3em;
 }
 
 fieldset h3 {
   margin: 0em 1em;
 }
+
 fieldset h4 {
   margin: 0em 2em;
   font-weight: 100;
@@ -113,6 +124,7 @@ fieldset h5 {
   margin: 0.5em 4em;
   font-size: 1.5em;
 }
+
 fieldset p {
   margin: 0.5em 4em;
   font-size: 1.5em;
@@ -122,6 +134,7 @@ fieldset ol,
 fieldset ul {
   margin: 1em 4em;
 }
+
 fieldset ol li,
 fieldset ul li {
   font-size: 1.5em;
@@ -134,6 +147,7 @@ fieldset ul li {
   border: 2px var(--code-color) solid;
   font-family: monospace;
 }
+
 .codeBlock {
   margin: 0em 6em;
   display: flex;
@@ -143,9 +157,11 @@ fieldset ul li {
 pre {
   font-size: 2em;
 }
+
 .verticalLine {
   border-right: 2px solid var(--code-color);
 }
+
 .code {
   font-size: 2em;
 }

@@ -769,7 +769,7 @@ nav#menu li#top      /* (0, 2, 0, 2) */
               </li>
             </ul>
           </fieldset>
-          -->
+          
           <fieldset id="ts-objects">
             <legend>6. Objects</legend>
             <h4>Notas de la sesión</h4>
@@ -943,17 +943,151 @@ for(let elem of array){
               </li>
             </ul>
           </fieldset>
-
+-->
           <fieldset id="advanced-functions">
             <legend>7. Advanced Functions</legend>
             <h4>Notas de la sesión</h4>
+            <h5>Funciones de primera clase</h5>
             <ul>
-              <li>Lorem Ipsum</li>
+              <li>
+                Podemos tratar a las funciones como cualquier otro tipo de
+                variable.
+              </li>
+              <li>
+                Las funciones <span class="important">no tienen nombre.</span>
+                Su nombre proviene de la variable que apunta a la función.
+              </li>
+              <li>
+                Declararemos las funciones como
+                <span class="codeLine">const</span>
+              </li>
+            </ul>
+            <h5>Métodos</h5>
+            <ul>
+              <li>
+                Las funciones definidas con la palabra reservada
+                <span class="codeLine">function</span> tienen una variable
+                especial, <span class="codeLine">this.</span>
+              </li>
+              <li>
+                Si hay un
+                <span class="important">objeto a la izquierda</span> de una
+                llamada, el objeto se convierte en el
+                <span class="codeLine">this.</span>.
+              </li>
+
+              <li>
+                <span class="important">El contexto lo da la llamada.</span>
+              </li>
+              <li>
+                Podemos <span class="important">forzar el vínculo</span> en otra
+                función mediante <span class="codeLine">bind()</span>. Aunque no
+                haya objeto a la izquierda, el objeto vendrá informado por el
+                vínculo generado artificialmente.
+              </li>
+              <li><span class="codeLine">groucho.sayHi.bind(Chicco)</span></li>
             </ul>
 
-            <h4>Enlaces</h4>
+            <h4>Arrow functions</h4>
             <ul>
-              <li>Lorem Ipsum</li>
+              <li>
+                Notación corta para definir funciones. Normalmente tienen
+                <span class="important">una sola instrucción.</span>
+              </li>
+              <li>
+                <span class="codeLine">const arrowSuma2 = (x,y) => (x+y);</span>
+              </li>
+              <li>Si necesitamos más de una línea, podemos usar llaves.</li>
+              <li>
+                No usamos la palabra reservada function, por lo que las arrow
+                functions <span class="important">no tienen </span
+                ><span class="codeLine">this</span>
+              </li>
+              <li>
+                <span class="important">No</span> podemos usar las arrow
+                functions como <span class="important">métodos.</span>
+              </li>
+            </ul>
+
+            <h4>Arrow functions methods</h4>
+
+            <p>
+              <span class="important"
+                >Reciben item, index y array como parámetros.</span
+              >
+            </p>
+            <p>
+              Algunos métodos de Array son de alto orden porque reciben
+              funciones como parámetro.
+            </p>
+            <p>
+              Esencialmente, tienen un bucle dentro. Recorren el array
+              transformando el contenido de sus índices o tratándolos de algún
+              modo.
+            </p>
+
+            <ul>
+              <li>
+                <span class="codeLine"> map()</span> - Aplica una
+                <span class="important">función a cada elemento</span> del
+                array.
+              </li>
+              <img src="./img/map_method.svg" width="1000" height="800" />
+              <li>
+                <span class="codeLine"> forEach()</span> - Igual que
+                <span class="codeLine">map()</span>, pero
+                <span class="important">no produce un nuevo array.</span>
+              </li>
+              <li>
+                <span class="codeLine"> filter()</span> - Devuelve los
+                <span class="important">elementos</span> que cumplen una
+                <span class="important">condición.</span>
+              </li>
+              <li>
+                <span class="codeLine"> find()</span> - Devuelve el
+                <span class="important">primer elemento</span> que cumple una
+                <span class="important">condición.</span>
+              </li>
+              <li>
+                <span class="codeLine"> findIndex()</span> - Devuelve el
+                <span class="important">índice</span> del primer
+                <span class="important">elemento</span> que cumple una
+                <span class="important">condición.</span>
+              </li>
+              <li>
+                <span class="codeLine"> sort()</span> -
+                <span class="important">Ordena</span> los elementos del array.
+              </li>
+              <li>
+                <span class="codeLine"> reduce()</span> - Ejecuta una
+                <span class="important">función acumulador</span> sobre los
+                elementos del array (sumador, máximo, mínimo)
+              </li>
+              <img src="./img/reduce_method.svg" width="1000" height="800" />
+              <li>
+                <span class="codeLine"> some()</span> - Devuelve
+                <span class="important">true si alguno</span> de los elementos
+                del array cumplen una <span class="important">condición.</span>
+              </li>
+              <li>
+                <span class="codeLine"> every()</span> -Devuelve
+                <span class="important">true si todos</span> de los elementos
+                del array cumplen una <span class="important">condición.</span>
+              </li>
+            </ul>
+
+            <h4>Closures / Contexto léxico</h4>
+            <ul>
+              <li>
+                <span class="important">Jerarquía de entornos </span> basados en
+                llaves.
+              </li>
+              <img src="./img/stack_example.svg" width="1000" height="800" />
+              <li>
+                <span class="important">Clausura</span> - Una función puede
+                <span class="important"> sobrevivir al ámbito </span>en el que
+                se creó.
+              </li>
             </ul>
           </fieldset>
 

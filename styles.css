@@ -31,15 +31,12 @@ article h2 {
 }
 
 h3 {
-  font-size: 2em;
-  margin: 0em 2em;
-  font-weight: 100;
-  text-decoration: underline;
+  text-decoration: none;
+  font-size: 3em;
 }
 
 h4 {
-  margin: 1.5em 4em;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 p {
@@ -118,6 +115,21 @@ fieldset {
   margin: 2em 3em;
 }
 
+fieldset h3 {
+  margin: 0em 1em;
+}
+
+fieldset h4 {
+  margin: 0em 2em;
+  font-weight: 100;
+  text-decoration: underline;
+}
+
+fieldset h5 {
+  margin: 1.5em 4em;
+  font-size: 1.5em;
+}
+
 fieldset p {
   margin: 0.5em 6em;
   font-size: 1.5em;
@@ -125,7 +137,7 @@ fieldset p {
 
 fieldset ol,
 fieldset ul {
-  margin: 1.5em 4em;
+  margin: 1.5em 6em;
 }
 
 fieldset ol li,

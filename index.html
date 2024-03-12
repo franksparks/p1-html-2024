@@ -42,7 +42,7 @@
         <article>
           <h2>Fundamentos</h2>
           <hr />
-          <!--
+          
           <fieldset id="basic-git">
             <legend>1. Basic Git</legend>
             <h4>Notas de la sesión</h4>
@@ -943,7 +943,7 @@ for(let elem of array){
               </li>
             </ul>
           </fieldset>
--->
+
           <fieldset id="advanced-functions">
             <legend>7. Advanced Functions</legend>
             <h4>Notas de la sesión</h4>
@@ -1094,12 +1094,163 @@ for(let elem of array){
           <fieldset id="classes">
             <legend>8. Classes</legend>
             <h4>Notas de la sesión</h4>
+            <p>
+              <span class="important"> Clase</span>: Definición de un tipo de
+              Objeto. Contiene campos y métodos.
+            </p>
+            <p>
+              <span class="important"> Constructor</span>: Inicializa una
+              instancia de clase, se llama implícitamente.
+            </p>
             <ul>
-              <li>Lorem Ipsum</li>
+              <li>
+                La palabra reservada <span class="codeLine"> new</span>
+                <span class="important"> reserva memoria</span> para el nuevo
+                objeto de la clase.
+              </li>
+              <li>
+                Al añadir <span class="codeLine"> export</span> a la declaración
+                de la clase, ésta será
+                <span class="important"> visible desde fuera del módulo</span>
+                donde ha sido declarada.
+              </li>
             </ul>
+            <h5>Encapsulación</h5>
+            <p>
+              <span class="important"> Restringimos el acceso</span> a parte del
+              programa para
+              <span class="important"> discernir mejor el origen</span> e los
+              errores/imprevistos.
+            </p>
+            <ul>
+              <li>
+                Versión <span class="important">TypeScript</span> - Seteamos los
+                parámetros de la clase como private con la palabra reservada
+                <span class="codeLine">private</span>. Se comprueba el acceso en
+                tiempo de compilación.
+              </li>
+              <li>
+                Versión <span class="important">JavaScript</span> - Seteamos los
+                parámetros de la clase como private con
+                <span class="codeLine">#</span> (también a las invocaciones del
+                campo). Se comprueba el acceso en tiempo de ejecuión.
+              </li>
+            </ul>
+            <p>
+              Al configurar un
+              <span class="important">campo como privado</span>, solo se puede
+              <span class="important"
+                >acceder desde los métodos de la clase</span
+              >, lo que acota los posibles errores a esos métodos.
+            </p>
+            <p>
+              En JavaScript, podemos implementar
+              <span class="important">getters y setters modernos</span>, que
+              limitan el acceso directo sin tener que cambiar los accesos en el
+              resto del código.
+            </p>
+            <ul>
+              <li>
+                <span class="codeLine"> console.log(person.fullName)</span> -
+                getter
+              </li>
+              <li>
+                <span class="codeLine"> person.fullName = "John Doe"</span> -
+                setter
+              </li>
+            </ul>
+
+            <h5>Herencia</h5>
+            <p>
+              <span class="important"
+                >Relación entre clases con propiedades y métodos en común.</span
+              >
+              La subclase tiene acceso a los recursos de la superclase.
+            </p>
+            <p><span class="codeLine">class Dog extends Animal{}</span></p>
+            <p>
+              La <span class="important">primera llamada</span> de una clase
+              derivada debe ser a <span class="codeLine">super().</span>
+            </p>
+            <p>
+              Las subclases
+              <span class="important">pueden reescribir los métodos</span> que
+              heredan.
+            </p>
+
+            <h5>Interfaces</h5>
+            <p>
+              Se utiliza la palabra reservada
+              <span class="codeLine">implements</span>.
+            </p>
+            <p>
+              <span class="important">Comunica partes del código.</span> La
+              parte del código que implementa la interfaz con la parte que la
+              usa.
+            </p>
+            <p>Una clase puede implementar varias interfaces a la vez.</p>
+            <h5>instanceof</h5>
+            <p>
+              Devuelve un
+              <span class="important"
+                >booleano en función de si una variable es de una clase
+                concreta</span
+              >, más allá de los tipos base. También tiene en cuenta las
+              superclases.
+            </p>
+
+            <h5>Excepciones</h5>
+            <p>
+              Dada una función que detecta un fallo, se recorre la pila de
+              funciones buscando la función que esté mejor capacitada para lidar
+              con el fallo.
+            </p>
+            <p><span class="codeLine">throw new Error("----")</span></p>
+            <p>
+              El código a proteger se envuelve en un
+              <span class="codeLine">try-catch</span>. Se intenta ejecutar el
+              código incluido en el <span class="codeLine">try</span> y si hay
+              un error, se captura en el <span class="codeLine">catch</span>.
+            </p>
+            <p>
+              Podemos
+              <span class="important">discriminar entre tipos de errores</span>
+              y devolver diferentes objetos error en base a éstos.
+            </p>
+
             <h4>Enlaces</h4>
             <ul>
-              <li>Lorem Ipsum</li>
+              <li>
+                <a
+                  href="https://www.typescriptlang.org/docs/handbook/2/classes.html#constructors"
+                  target="_blank"
+                  >TypeScript - Constructors</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.typescriptlang.org/docs/handbook/2/classes.html#class-heritage"
+                  target="_blank"
+                >
+                  TypeScript - Heritage
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties"
+                  target="_blank"
+                >
+                  MDN - Private properties
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error"
+                  target="_blank"
+                >
+                  MDN - Error objects
+                </a>
+              </li>
             </ul>
           </fieldset>
 

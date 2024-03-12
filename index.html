@@ -42,9 +42,11 @@
         <article>
           <h2>Fundamentos</h2>
           <hr />
+          <!--
           <fieldset id="basic-git">
             <legend>1. Basic Git</legend>
             <h4>Notas de la sesión</h4>
+            <h5>Git</h5>
             <ul>
               <li>
                 <span class="important">Git</span> es un sistema de control de
@@ -686,36 +688,31 @@ nav#menu li#top      /* (0, 2, 0, 2) */
             <legend>5. TypeScript Basics</legend>
             <h4>Notas de la sesión</h4>
             <p>
-              <span class="important">TypeScript</span> es una capa por encima
-              de JavaScript. Proporciona un
+              <span class="important">TypeScript</span> es una capa por
+              <span class="important"> encima de JavaScript.</span> Proporciona
+              un
               <span class="important"> sistema de tipos muy potente.</span>
             </p>
             <ul>
               <li>
-                El <span class="important">código resultante</span> es
-                <span class="important">JavaScript.</span>
-              </li>
-              <li>
-                <span class="important">Detecta errores de programación</span>
-                en tiempo de compilación.
-              </li>
-              <li>
-                Ayuda a los desarrolladores
-                <span class="important"
-                  >mostrando errores mientras programan.</span
-                >
-                También muestra posibles maneras de completar campos, métodos o
-                parámetros.
+                TypeScript aporta una <span class="important">comprobación estática</span> del programa
+                en tiempo de compilación. También muestra posibles maneras de
+                completar campos, métodos o parámetros.
               </li>
               <li>
                 Los <span class="important">tipos</span> en TypeScript son
                 <span class="important">immutables.</span>
               </li>
               <li>
-                Necesitamos indicar el tipo de las variables. El
-                <span class="important">tipo del resultado</span> suele estar
-                bien <span class="important">inferido por TypeScript</span>,
-                pero podemos especificarlo.
+                A la hora de definir funciones, necesitamos indicar el tipo de
+                las variables.
+              </li>
+              <li>
+                El
+                <span class="important">tipo del resultado</span> de una función
+                suele estar bien
+                <span class="important">inferido por TypeScript</span>, pero
+                podemos especificarlo.
               </li>
               <li>
                 Podemos añadir <span class="important">?</span> a un parámetro
@@ -772,28 +769,194 @@ nav#menu li#top      /* (0, 2, 0, 2) */
               </li>
             </ul>
           </fieldset>
+          -->
           <fieldset id="ts-objects">
             <legend>6. Objects</legend>
             <h4>Notas de la sesión</h4>
+            <h5>Objetos</h5>
             <ul>
-              <li>Lorem Ipsum</li>
+              <li>Representación de un concepto y sus propiedades</li>
+              <li>
+                Con el operador <span class="codeLine">.</span> accederemos a
+                sus propiedades.
+              </li>
+              <li>
+                Podemos <span class="important">mutar</span> un objeto en
+                cualquier momento, añadiendo, editando o eliminando sus
+                propiedades.
+              </li>
+              <li>
+                La notación <span class="codeLine">[ ]</span> nos permite
+                acceder a campos con nombres que contienen puntos o espacios.
+              </li>
+            </ul>
+            <h5>Accediendo a objetos</h5>
+            <ul>
+              <li>
+                <span class="codeLine">Object.keys(obj)</span> devuelve array de
+                campos
+              </li>
+              <li>
+                <span class="codeLine">Object.values(obj)</span> devuelve array
+                de valores
+              </li>
+              <li>
+                <span class="codeLine">Object.entries(obj)</span> devuelve array
+                de pares "campo-valor"
+              </li>
+            </ul>
+            <h5>Iterar en objetos</h5>
+            <p>
+              Para <span class="important">iterar por las propiedades</span> de
+              un objeto, necesitamos la palabra reservada
+              <span class="codeLine">in</span>:
+            </p>
+
+            <pre class="codeBlock">
+for(let field in object){
+    console.log(field)
+    console.log(agent[field])
+}
+            </pre>
+            <h5>Comprobar si existe una propiedad en un objeto</h5>
+            <pre class="codeBlock">
+if("name" in agent){
+    console.log(agent[name])
+}
+            </pre>
+            <h5>Abreviar declaración de propiedades de objetos</h5>
+            <p>
+              Si <span class="important">declaramos una variable</span> y más
+              tarde queremos
+              <span class="important">usarla como propiedad</span> de un objeto,
+              no necesitamos especificar su valor de nuevo.
+            </p>
+            <pre class="codeBlock">
+let x = 3
+let y = 5
+let coord={
+    x, y
+}
+            </pre>
+            <h5>TypeScript Object Types</h5>
+            <ul>
+              <li>
+                Podemos especificar el tipo de dato para cada propiedad, aunque
+                TypeScript ya lo infiera por sí mismo.
+              </li>
+              <li>
+                Podemos <span class="important">definir nuestras estructuras de tipos</span> para
+                reaprovecharlas.
+              </li>
+              <pre class="codeBlock">
+type coord2d ={
+    x: number,
+    y: number
+}
+              </pre>
+              <li>Con el operador <span class="codeLine">?</span> marcaremos <span class="important">campos como opcionales.</span></li>
+              <li>
+                Podemos usar el operador <span class="codeLine">|</span> para <span class="important">especificar varios tipos</span>
+                posibles, incluyendo undefined.
+              </li>
+              <li>
+                <span class="important">Interface</span>: Identifica una serie de propiedades como un elemento,
+                pero obteniéndolas por métodos como los getter.
+              </li>
+              <li>
+                Podemos marcar propiedades como readonly para evitar
+                modificaciones, solo en interfaces.
+              </li>
+              <pre class="codeBlock">
+let person : {
+    name: string,
+    readonly dni: string
+}
+            </pre
+              >
+            </ul>
+            <h5></h5>
+            <h5>Arrays</h5>
+            <ul>
+              <li><span class="important">Secuencia</span>
+              </span> de elementos, cada uno con un <span class="important">índice único.</span>
+            </span></li>
+              <li><span class="codeLine">a[0]</span> - elemento en posición 0 del array a.</li>
+            </ul>
+            <h5>Iterar en arrays</h5>
+            <p>
+              Para <span class="important">iterar por los elementos</span> de un
+              array, necesitamos la palabra reservada
+              <span class="codeLine">of</span>:
+            </p>
+
+            <pre class="codeBlock">
+for(let elem of array){
+    console.log(elem)
+}
+            </pre>
+            <h5>Algunos métodos de arrays:</h5>
+            <ul>
+              <li>
+                <span class="codeLine">push()</span> - Añade elemento al final.
+              </li>
+              <li>
+                <span class="codeLine">pop()</span> - Elimina el último
+                elemento.
+              </li>
+              <li>
+                <span class="codeLine">shift()</span> - Elimina un elemento del
+                principio.
+              </li>
+              <li>
+                <span class="codeLine">unshift()</span> - Añade un elemento al
+                principip.
+              </li>
+              <li>
+                <span class="codeLine">Array.isArray()</span> - Permite
+                <span class="important">comprobar</span> si un elemento es un
+                <span class="important">array de manera fiable.</span>
+              </li>
+            </ul>
+            <h5>TypeScript Array Types</h5>
+            <ul>
+              <li>Arrays con un <span class="important">tamaño fijo.</span></li>
+              <li>
+                <span class="codeLine"
+                  >let dni: readonly [number, string] = [47745843, "M"]</span
+                >
+              </li>
             </ul>
             <h4>Enlaces</h4>
             <ul>
-              <li>Lorem Ipsum</li>
+              <li>
+                <a
+                  href="https://www.typescriptlang.org/docs/handbook/2/objects.html"
+                  target="_blank"
+                  >TypeScript - Object Types</a
+                >
+              </li>
+              <li>
+                <a href="https://www.json.org/json-en.html" target="_blank"
+                  >JavaScript Object Notation</a
+                >
+              </li>
             </ul>
           </fieldset>
+
           <fieldset id="advanced-functions">
             <legend>7. Advanced Functions</legend>
             <h4>Notas de la sesión</h4>
             <ul>
               <li>Lorem Ipsum</li>
             </ul>
+
             <h4>Enlaces</h4>
             <ul>
               <li>Lorem Ipsum</li>
             </ul>
           </fieldset>
+
           <fieldset id="classes">
             <legend>8. Classes</legend>
             <h4>Notas de la sesión</h4>
@@ -805,6 +968,7 @@ nav#menu li#top      /* (0, 2, 0, 2) */
               <li>Lorem Ipsum</li>
             </ul>
           </fieldset>
+
           <fieldset id="async">
             <legend>9. Asynchrony</legend>
             <h4>Notas de la sesión</h4>
@@ -816,6 +980,7 @@ nav#menu li#top      /* (0, 2, 0, 2) */
               <li>Lorem Ipsum</li>
             </ul>
           </fieldset>
+
           <fieldset id="modules">
             <legend>10. Modules</legend>
             <h4>Notas de la sesión</h4>

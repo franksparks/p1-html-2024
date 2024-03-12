@@ -1,15 +1,15 @@
 :root {
+  --background-color: black;
+  --font-color: #f5f5f5;
   --border-color: white;
   --link-color: #0096ff;
   --important-color: red;
   --code-color: green;
-  --css-prop-color: yellow;
 }
 
 body {
-  background-color: #000000;
-  color: #f5f5f5;
-  font-family: "Roboto", sans-serif;
+  background-color: var(--background-color);
+  color: var(--font-color);
   margin: 0;
   padding: 0;
   display: flex;
@@ -17,15 +17,17 @@ body {
   justify-content: space-between;
   height: 100vh;
   overflow-y: hidden;
+  font-family: "Comfortaa", sans-serif;
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2.5em;
   margin: 0;
 }
 
 article h2 {
   font-size: 2em;
+  margin: 0.5em 1.5em;
 }
 
 h3 {
@@ -53,6 +55,8 @@ header {
   flex-direction: row;
   justify-content: space-between;
   width: 100vw;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .headerLinks {
@@ -77,20 +81,21 @@ main {
   display: flex;
   flex-direction: row wrap;
   justify-content: space-between;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 nav {
   font-style: italic;
   font-size: 1.5em;
-  padding: 1em;
-  flex: 1;
+  padding: 0.5em;
+  flex: 1.3;
   display: block;
+  overflow: auto;
 }
 
-nav ul li {
+nav ul li ul li {
   font-style: normal;
-  margin: 10px 0px;
+  margin: 0.8em 0px;
 }
 
 section {
@@ -107,7 +112,7 @@ section {
 
 fieldset {
   border: 3px solid var(--border-color);
-  margin: 3em;
+  margin: 2em 3em;
 }
 
 fieldset h3 {
@@ -121,30 +126,30 @@ fieldset h4 {
 }
 
 fieldset h5 {
-  margin: 0.5em 4em;
+  margin: 1.5em 4em;
   font-size: 1.5em;
 }
 
 fieldset p {
-  margin: 0.5em 4em;
+  margin: 0.5em 6em;
   font-size: 1.5em;
 }
 
 fieldset ol,
 fieldset ul {
-  margin: 1em 4em;
+  margin: 1.5em 6em;
 }
 
 fieldset ol li,
 fieldset ul li {
   font-size: 1.5em;
-  margin: 1em;
+  margin: 1.5em;
 }
 
 .codeLine,
 .codeBlock {
   color: var(--border-color);
-  border: 2px var(--code-color) solid;
+  border: 3px var(--code-color) solid;
   font-family: monospace;
 }
 
@@ -168,6 +173,7 @@ pre {
 
 hr {
   height: 3px;
+  margin: 0em 3em;
 }
 
 .important {

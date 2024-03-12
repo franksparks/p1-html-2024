@@ -4,10 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/img/favicon.svg" />
+    <!-- Importamos fuentes - inicio -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Importamos fuentes - fin -->
 
     <title>Apuntes Full Stack</title>
     <link rel="stylesheet" href="/styles.css" />
@@ -34,9 +42,11 @@
         <article>
           <h2>Fundamentos</h2>
           <hr />
+          
           <fieldset id="basic-git">
             <legend>1. Basic Git</legend>
             <h4>Notas de la sesión</h4>
+            <h5>Git</h5>
             <ul>
               <li>
                 <span class="important">Git</span> es un sistema de control de
@@ -572,9 +582,9 @@
                 <span>inline style</span> -
                 <span class="codeLine">(1,0,0,0)</span>
               </li>
-            </ul>
-            <div class="codeBlock">
-              <pre>
+
+              <div class="codeBlock">
+                <pre>
 h1                   /* (0, 0, 0, 1) */
 p em                 /* (0, 0, 0, 2) */
 .grape               /* (0, 0, 1, 0) */
@@ -584,8 +594,9 @@ p.bright e.dark      /* (0, 0, 2, 2) */
 div#sidebar *[href]  /* (0, 1, 1, 1) */
 nav#menu li#top      /* (0, 2, 0, 2) */
             </pre
-              >
-            </div>
+                >
+              </div>
+            </ul>
             <p>
               La palabra reservada <span class="important">!important</span> se
               impone al resto y generaría su jerarquía propia.
@@ -677,44 +688,31 @@ nav#menu li#top      /* (0, 2, 0, 2) */
             <legend>5. TypeScript Basics</legend>
             <h4>Notas de la sesión</h4>
             <p>
-              <span class="important">TypeScript</span> es una
-              <span class="important">capa por encima de JavaScript.</span>
-              Proporciona un
+              <span class="important">TypeScript</span> es una capa por
+              <span class="important"> encima de JavaScript.</span> Proporciona
+              un
               <span class="important"> sistema de tipos muy potente.</span>
             </p>
             <ul>
               <li>
-                El <span class="important">código resultante</span> es
-                <span class="important">JavaScript.</span>
-              </li>
-              <li>
-                Detecta
-                <span class="important"
-                  >errores de programación en tiempo de compilación.</span
-                >
-              </li>
-              <li>
-                Ayuda a los desarrolladores
-                <span class="important"
-                  >mostrando errores mientras programan.</span
-                >
-                También
-                <span class="important"
-                  >muestra posibles maneras de completar campos, métodos o
-                  parámetros.</span
-                >
+                TypeScript aporta una <span class="important">comprobación estática</span> del programa
+                en tiempo de compilación. También muestra posibles maneras de
+                completar campos, métodos o parámetros.
               </li>
               <li>
                 Los <span class="important">tipos</span> en TypeScript son
-                <span class="important">immutables (obviamente).</span>
+                <span class="important">immutables.</span>
               </li>
               <li>
-                <span class="important"
-                  >Necesitamos indicar el tipo de las variables.</span
-                >
-                El <span class="important">tipo del resultado</span> suele estar
-                bien <span class="important">inferido por TypeScript</span>,
-                pero podemos especificarlo.
+                A la hora de definir funciones, necesitamos indicar el tipo de
+                las variables.
+              </li>
+              <li>
+                El
+                <span class="important">tipo del resultado</span> de una función
+                suele estar bien
+                <span class="important">inferido por TypeScript</span>, pero
+                podemos especificarlo.
               </li>
               <li>
                 Podemos añadir <span class="important">?</span> a un parámetro
@@ -725,7 +723,8 @@ nav#menu li#top      /* (0, 2, 0, 2) */
             <h5>Buenas prácticas</h5>
             <p>
               Siempre
-              <span class="important"> comprobaremos que si algo es NaN </span>
+              <span class="important"> comprobaremos</span> que si algo es
+              <span class="important">NaN </span>
               mediante
               <span class="codeLine">
                 Number.isNan("elemento-a-comprobar")</span
@@ -734,17 +733,20 @@ nav#menu li#top      /* (0, 2, 0, 2) */
             <h5>Conversión a boolean en TypeScript</h5>
             <ul>
               <li>
-                <span class="codeLine"> if (num) </span> - number -
-                <span class="important"> true cuando num no es cero</span>
+                <span class="codeLine"> if (num)</span>
+                devuelve true si
+                <span class="important">el número no es cero.</span>
               </li>
               <li>
-                <span class="codeLine"> if (str) </span> - string -
-                <span class="important"> true cuando str no está vacío</span>
+                <span class="codeLine"> if (str)</span>
+                devuelve true si
+                <span class="important"> el string no está vacío.</span>
               </li>
               <li>
-                <span class="codeLine"> if (obj) </span> - number -
+                <span class="codeLine"> if (obj)</span>
+                devuelve true si
                 <span class="important">
-                  true cuando obj no es null o undefined</span
+                  el objeto no es null o undefined.</span
                 >
               </li>
             </ul>
@@ -767,39 +769,491 @@ nav#menu li#top      /* (0, 2, 0, 2) */
               </li>
             </ul>
           </fieldset>
+          
           <fieldset id="ts-objects">
             <legend>6. Objects</legend>
             <h4>Notas de la sesión</h4>
+            <h5>Objetos</h5>
             <ul>
-              <li>Lorem Ipsum</li>
+              <li>Representación de un concepto y sus propiedades</li>
+              <li>
+                Con el operador <span class="codeLine">.</span> accederemos a
+                sus propiedades.
+              </li>
+              <li>
+                Podemos <span class="important">mutar</span> un objeto en
+                cualquier momento, añadiendo, editando o eliminando sus
+                propiedades.
+              </li>
+              <li>
+                La notación <span class="codeLine">[ ]</span> nos permite
+                acceder a campos con nombres que contienen puntos o espacios.
+              </li>
+            </ul>
+            <h5>Accediendo a objetos</h5>
+            <ul>
+              <li>
+                <span class="codeLine">Object.keys(obj)</span> devuelve array de
+                campos
+              </li>
+              <li>
+                <span class="codeLine">Object.values(obj)</span> devuelve array
+                de valores
+              </li>
+              <li>
+                <span class="codeLine">Object.entries(obj)</span> devuelve array
+                de pares "campo-valor"
+              </li>
+            </ul>
+            <h5>Iterar en objetos</h5>
+            <p>
+              Para <span class="important">iterar por las propiedades</span> de
+              un objeto, necesitamos la palabra reservada
+              <span class="codeLine">in</span>:
+            </p>
+
+            <pre class="codeBlock">
+for(let field in object){
+    console.log(field)
+    console.log(agent[field])
+}
+            </pre>
+            <h5>Comprobar si existe una propiedad en un objeto</h5>
+            <pre class="codeBlock">
+if("name" in agent){
+    console.log(agent[name])
+}
+            </pre>
+            <h5>Abreviar declaración de propiedades de objetos</h5>
+            <p>
+              Si <span class="important">declaramos una variable</span> y más
+              tarde queremos
+              <span class="important">usarla como propiedad</span> de un objeto,
+              no necesitamos especificar su valor de nuevo.
+            </p>
+            <pre class="codeBlock">
+let x = 3
+let y = 5
+let coord={
+    x, y
+}
+            </pre>
+            <h5>TypeScript Object Types</h5>
+            <ul>
+              <li>
+                Podemos especificar el tipo de dato para cada propiedad, aunque
+                TypeScript ya lo infiera por sí mismo.
+              </li>
+              <li>
+                Podemos <span class="important">definir nuestras estructuras de tipos</span> para
+                reaprovecharlas.
+              </li>
+              <pre class="codeBlock">
+type coord2d ={
+    x: number,
+    y: number
+}
+              </pre>
+              <li>Con el operador <span class="codeLine">?</span> marcaremos <span class="important">campos como opcionales.</span></li>
+              <li>
+                Podemos usar el operador <span class="codeLine">|</span> para <span class="important">especificar varios tipos</span>
+                posibles, incluyendo undefined.
+              </li>
+              <li>
+                <span class="important">Interface</span>: Identifica una serie de propiedades como un elemento,
+                pero obteniéndolas por métodos como los getter.
+              </li>
+              <li>
+                Podemos marcar propiedades como readonly para evitar
+                modificaciones, solo en interfaces.
+              </li>
+              <pre class="codeBlock">
+let person : {
+    name: string,
+    readonly dni: string
+}
+            </pre
+              >
+            </ul>
+            <h5></h5>
+            <h5>Arrays</h5>
+            <ul>
+              <li><span class="important">Secuencia</span>
+              </span> de elementos, cada uno con un <span class="important">índice único.</span>
+            </span></li>
+              <li><span class="codeLine">a[0]</span> - elemento en posición 0 del array a.</li>
+            </ul>
+            <h5>Iterar en arrays</h5>
+            <p>
+              Para <span class="important">iterar por los elementos</span> de un
+              array, necesitamos la palabra reservada
+              <span class="codeLine">of</span>:
+            </p>
+
+            <pre class="codeBlock">
+for(let elem of array){
+    console.log(elem)
+}
+            </pre>
+            <h5>Algunos métodos de arrays:</h5>
+            <ul>
+              <li>
+                <span class="codeLine">push()</span> - Añade elemento al final.
+              </li>
+              <li>
+                <span class="codeLine">pop()</span> - Elimina el último
+                elemento.
+              </li>
+              <li>
+                <span class="codeLine">shift()</span> - Elimina un elemento del
+                principio.
+              </li>
+              <li>
+                <span class="codeLine">unshift()</span> - Añade un elemento al
+                principip.
+              </li>
+              <li>
+                <span class="codeLine">Array.isArray()</span> - Permite
+                <span class="important">comprobar</span> si un elemento es un
+                <span class="important">array de manera fiable.</span>
+              </li>
+            </ul>
+            <h5>TypeScript Array Types</h5>
+            <ul>
+              <li>Arrays con un <span class="important">tamaño fijo.</span></li>
+              <li>
+                <span class="codeLine"
+                  >let dni: readonly [number, string] = [47745843, "M"]</span
+                >
+              </li>
             </ul>
             <h4>Enlaces</h4>
             <ul>
-              <li>Lorem Ipsum</li>
+              <li>
+                <a
+                  href="https://www.typescriptlang.org/docs/handbook/2/objects.html"
+                  target="_blank"
+                  >TypeScript - Object Types</a
+                >
+              </li>
+              <li>
+                <a href="https://www.json.org/json-en.html" target="_blank"
+                  >JavaScript Object Notation</a
+                >
+              </li>
             </ul>
           </fieldset>
+
           <fieldset id="advanced-functions">
             <legend>7. Advanced Functions</legend>
             <h4>Notas de la sesión</h4>
+            <h5>Funciones de primera clase</h5>
             <ul>
-              <li>Lorem Ipsum</li>
+              <li>
+                Podemos tratar a las funciones como cualquier otro tipo de
+                variable.
+              </li>
+              <li>
+                Las funciones <span class="important">no tienen nombre.</span>
+                Su nombre proviene de la variable que apunta a la función.
+              </li>
+              <li>
+                Declararemos las funciones como
+                <span class="codeLine">const</span>
+              </li>
             </ul>
-            <h4>Enlaces</h4>
+            <h5>Métodos</h5>
             <ul>
-              <li>Lorem Ipsum</li>
+              <li>
+                Las funciones definidas con la palabra reservada
+                <span class="codeLine">function</span> tienen una variable
+                especial, <span class="codeLine">this.</span>
+              </li>
+              <li>
+                Si hay un
+                <span class="important">objeto a la izquierda</span> de una
+                llamada, el objeto se convierte en el
+                <span class="codeLine">this.</span>.
+              </li>
+
+              <li>
+                <span class="important">El contexto lo da la llamada.</span>
+              </li>
+              <li>
+                Podemos <span class="important">forzar el vínculo</span> en otra
+                función mediante <span class="codeLine">bind()</span>. Aunque no
+                haya objeto a la izquierda, el objeto vendrá informado por el
+                vínculo generado artificialmente.
+              </li>
+              <li><span class="codeLine">groucho.sayHi.bind(Chicco)</span></li>
+            </ul>
+
+            <h4>Arrow functions</h4>
+            <ul>
+              <li>
+                Notación corta para definir funciones. Normalmente tienen
+                <span class="important">una sola instrucción.</span>
+              </li>
+              <li>
+                <span class="codeLine">const arrowSuma2 = (x,y) => (x+y);</span>
+              </li>
+              <li>Si necesitamos más de una línea, podemos usar llaves.</li>
+              <li>
+                No usamos la palabra reservada function, por lo que las arrow
+                functions <span class="important">no tienen </span
+                ><span class="codeLine">this</span>
+              </li>
+              <li>
+                <span class="important">No</span> podemos usar las arrow
+                functions como <span class="important">métodos.</span>
+              </li>
+            </ul>
+
+            <h4>Arrow functions methods</h4>
+
+            <p>
+              <span class="important"
+                >Reciben item, index y array como parámetros.</span
+              >
+            </p>
+            <p>
+              Algunos métodos de Array son de alto orden porque reciben
+              funciones como parámetro.
+            </p>
+            <p>
+              Esencialmente, tienen un bucle dentro. Recorren el array
+              transformando el contenido de sus índices o tratándolos de algún
+              modo.
+            </p>
+
+            <ul>
+              <li>
+                <span class="codeLine"> map()</span> - Aplica una
+                <span class="important">función a cada elemento</span> del
+                array.
+              </li>
+              <img src="./img/map_method.svg" width="1000" height="800" />
+              <li>
+                <span class="codeLine"> forEach()</span> - Igual que
+                <span class="codeLine">map()</span>, pero
+                <span class="important">no produce un nuevo array.</span>
+              </li>
+              <li>
+                <span class="codeLine"> filter()</span> - Devuelve los
+                <span class="important">elementos</span> que cumplen una
+                <span class="important">condición.</span>
+              </li>
+              <li>
+                <span class="codeLine"> find()</span> - Devuelve el
+                <span class="important">primer elemento</span> que cumple una
+                <span class="important">condición.</span>
+              </li>
+              <li>
+                <span class="codeLine"> findIndex()</span> - Devuelve el
+                <span class="important">índice</span> del primer
+                <span class="important">elemento</span> que cumple una
+                <span class="important">condición.</span>
+              </li>
+              <li>
+                <span class="codeLine"> sort()</span> -
+                <span class="important">Ordena</span> los elementos del array.
+              </li>
+              <li>
+                <span class="codeLine"> reduce()</span> - Ejecuta una
+                <span class="important">función acumulador</span> sobre los
+                elementos del array (sumador, máximo, mínimo)
+              </li>
+              <img src="./img/reduce_method.svg" width="1000" height="800" />
+              <li>
+                <span class="codeLine"> some()</span> - Devuelve
+                <span class="important">true si alguno</span> de los elementos
+                del array cumplen una <span class="important">condición.</span>
+              </li>
+              <li>
+                <span class="codeLine"> every()</span> -Devuelve
+                <span class="important">true si todos</span> de los elementos
+                del array cumplen una <span class="important">condición.</span>
+              </li>
+            </ul>
+
+            <h4>Closures / Contexto léxico</h4>
+            <ul>
+              <li>
+                <span class="important">Jerarquía de entornos </span> basados en
+                llaves.
+              </li>
+              <img src="./img/stack_example.svg" width="1000" height="800" />
+              <li>
+                <span class="important">Clausura</span> - Una función puede
+                <span class="important"> sobrevivir al ámbito </span>en el que
+                se creó.
+              </li>
             </ul>
           </fieldset>
+
           <fieldset id="classes">
             <legend>8. Classes</legend>
             <h4>Notas de la sesión</h4>
+            <p>
+              <span class="important"> Clase</span>: Definición de un tipo de
+              Objeto. Contiene campos y métodos.
+            </p>
+            <p>
+              <span class="important"> Constructor</span>: Inicializa una
+              instancia de clase, se llama implícitamente.
+            </p>
             <ul>
-              <li>Lorem Ipsum</li>
+              <li>
+                La palabra reservada <span class="codeLine"> new</span>
+                <span class="important"> reserva memoria</span> para el nuevo
+                objeto de la clase.
+              </li>
+              <li>
+                Al añadir <span class="codeLine"> export</span> a la declaración
+                de la clase, ésta será
+                <span class="important"> visible desde fuera del módulo</span>
+                donde ha sido declarada.
+              </li>
             </ul>
+            <h5>Encapsulación</h5>
+            <p>
+              <span class="important"> Restringimos el acceso</span> a parte del
+              programa para
+              <span class="important"> discernir mejor el origen</span> e los
+              errores/imprevistos.
+            </p>
+            <ul>
+              <li>
+                Versión <span class="important">TypeScript</span> - Seteamos los
+                parámetros de la clase como private con la palabra reservada
+                <span class="codeLine">private</span>. Se comprueba el acceso en
+                tiempo de compilación.
+              </li>
+              <li>
+                Versión <span class="important">JavaScript</span> - Seteamos los
+                parámetros de la clase como private con
+                <span class="codeLine">#</span> (también a las invocaciones del
+                campo). Se comprueba el acceso en tiempo de ejecuión.
+              </li>
+            </ul>
+            <p>
+              Al configurar un
+              <span class="important">campo como privado</span>, solo se puede
+              <span class="important"
+                >acceder desde los métodos de la clase</span
+              >, lo que acota los posibles errores a esos métodos.
+            </p>
+            <p>
+              En JavaScript, podemos implementar
+              <span class="important">getters y setters modernos</span>, que
+              limitan el acceso directo sin tener que cambiar los accesos en el
+              resto del código.
+            </p>
+            <ul>
+              <li>
+                <span class="codeLine"> console.log(person.fullName)</span> -
+                getter
+              </li>
+              <li>
+                <span class="codeLine"> person.fullName = "John Doe"</span> -
+                setter
+              </li>
+            </ul>
+
+            <h5>Herencia</h5>
+            <p>
+              <span class="important"
+                >Relación entre clases con propiedades y métodos en común.</span
+              >
+              La subclase tiene acceso a los recursos de la superclase.
+            </p>
+            <p><span class="codeLine">class Dog extends Animal{}</span></p>
+            <p>
+              La <span class="important">primera llamada</span> de una clase
+              derivada debe ser a <span class="codeLine">super().</span>
+            </p>
+            <p>
+              Las subclases
+              <span class="important">pueden reescribir los métodos</span> que
+              heredan.
+            </p>
+
+            <h5>Interfaces</h5>
+            <p>
+              Se utiliza la palabra reservada
+              <span class="codeLine">implements</span>.
+            </p>
+            <p>
+              <span class="important">Comunica partes del código.</span> La
+              parte del código que implementa la interfaz con la parte que la
+              usa.
+            </p>
+            <p>Una clase puede implementar varias interfaces a la vez.</p>
+            <h5>instanceof</h5>
+            <p>
+              Devuelve un
+              <span class="important"
+                >booleano en función de si una variable es de una clase
+                concreta</span
+              >, más allá de los tipos base. También tiene en cuenta las
+              superclases.
+            </p>
+
+            <h5>Excepciones</h5>
+            <p>
+              Dada una función que detecta un fallo, se recorre la pila de
+              funciones buscando la función que esté mejor capacitada para lidar
+              con el fallo.
+            </p>
+            <p><span class="codeLine">throw new Error("----")</span></p>
+            <p>
+              El código a proteger se envuelve en un
+              <span class="codeLine">try-catch</span>. Se intenta ejecutar el
+              código incluido en el <span class="codeLine">try</span> y si hay
+              un error, se captura en el <span class="codeLine">catch</span>.
+            </p>
+            <p>
+              Podemos
+              <span class="important">discriminar entre tipos de errores</span>
+              y devolver diferentes objetos error en base a éstos.
+            </p>
+
             <h4>Enlaces</h4>
             <ul>
-              <li>Lorem Ipsum</li>
+              <li>
+                <a
+                  href="https://www.typescriptlang.org/docs/handbook/2/classes.html#constructors"
+                  target="_blank"
+                  >TypeScript - Constructors</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.typescriptlang.org/docs/handbook/2/classes.html#class-heritage"
+                  target="_blank"
+                >
+                  TypeScript - Heritage
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties"
+                  target="_blank"
+                >
+                  MDN - Private properties
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error"
+                  target="_blank"
+                >
+                  MDN - Error objects
+                </a>
+              </li>
             </ul>
           </fieldset>
+
           <fieldset id="async">
             <legend>9. Asynchrony</legend>
             <h4>Notas de la sesión</h4>
@@ -811,6 +1265,7 @@ nav#menu li#top      /* (0, 2, 0, 2) */
               <li>Lorem Ipsum</li>
             </ul>
           </fieldset>
+
           <fieldset id="modules">
             <legend>10. Modules</legend>
             <h4>Notas de la sesión</h4>
@@ -832,6 +1287,7 @@ nav#menu li#top      /* (0, 2, 0, 2) */
             <p>Lorem Ipsum</p>
           </fieldset>
         </article>
+
         <article>
           <h2>FrontEnd</h2>
           <hr />
@@ -840,6 +1296,7 @@ nav#menu li#top      /* (0, 2, 0, 2) */
             <p>Lorem Ipsum</p>
           </fieldset>
         </article>
+
         <article>
           <h2>Proyecto</h2>
           <hr />
@@ -848,6 +1305,7 @@ nav#menu li#top      /* (0, 2, 0, 2) */
             <p>Lorem Ipsum</p>
           </fieldset>
         </article>
+
         <article>
           <h2>Miscelánea</h2>
           <hr />
@@ -876,6 +1334,7 @@ nav#menu li#top      /* (0, 2, 0, 2) */
                 nosotros,
                 <span class="important">es para otras personas.</span>
               </li>
+              <li>Hay que <span class="important">leer mucho código.</span></li>
             </ul>
             <p></p>
             <p></p>

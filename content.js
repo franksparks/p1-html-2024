@@ -41,10 +41,41 @@ articles.forEach((article) => {
   listItem.appendChild(subList);
   listItem.classList.add("remove-bullet");
   list.appendChild(listItem);
+  list.classList.add("non-selection");
 
   // Actualizamos el DOM con las sesiones
   nav.appendChild(list);
 
   // Actualizamos el índice en el modelo.
   index[heading] = subHeadings;
+});
+
+// Gestión de las clases en modo día/noche
+
+const body = document.querySelector("body");
+if (body === null) {
+  throw new Error("No está en el DOM");
+}
+
+const dayButton = document.getElementById("sun");
+if (dayButton === null) {
+  throw new Error("No está en el DOM");
+}
+const nightButton = document.getElementById("moon");
+if (nightButton === null) {
+  throw new Error("No está en el DOM");
+}
+
+dayButton.addEventListener("click", () => {
+  console.log("click en el sol");
+  dayButton.classList.toggle("hidden");
+  nightButton.classList.toggle("hidden");
+  body.classList.toggle("day-mode");
+});
+
+nightButton.addEventListener("click", () => {
+  console.log("click en la luna");
+  dayButton.classList.toggle("hidden");
+  nightButton.classList.toggle("hidden");
+  body.classList.toggle("day-mode");
 });

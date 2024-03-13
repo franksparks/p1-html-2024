@@ -16,13 +16,17 @@
       rel="stylesheet"
     />
     <!-- Importamos fuentes - fin -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <title>Apuntes Full Stack</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
     <header>
-      <div class="headerTitle">
+      <div class="headerTitle non-selection">
         <h1>Apuntes del Posgrado Full-Stack Web Technologies, edición 2024</h1>
       </div>
       <div class="headerLinks">
@@ -33,6 +37,34 @@
         <a href="https://full-stack-bcn.dev/" target="”_blank”">
           Documentación de Pau</a
         >
+        <div class="headerIcons">
+          <svg
+            id="moon"
+            class="icon hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            width="2em"
+            height="2em"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M12 21q-3.75 0-6.375-2.625T3 12q0-3.75 2.625-6.375T12 3q.35 0 .688.025t.662.075q-1.025.725-1.638 1.888T11.1 7.5q0 2.25 1.575 3.825T16.5 12.9q1.375 0 2.525-.613T20.9 10.65q.05.325.075.662T21 12q0 3.75-2.625 6.375T12 21"
+            ></path>
+          </svg>
+          <svg
+            id="sun"
+            class="icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="2em"
+            height="2em"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M12 17q-2.075 0-3.537-1.463T7 12q0-2.075 1.463-3.537T12 7q2.075 0 3.538 1.463T17 12q0 2.075-1.463 3.538T12 17m-7-4H1v-2h4zm18 0h-4v-2h4zM11 5V1h2v4zm0 18v-4h2v4zM6.4 7.75L3.875 5.325L5.3 3.85l2.4 2.5zm12.3 12.4l-2.425-2.525L17.6 16.25l2.525 2.425zM16.25 6.4l2.425-2.525L20.15 5.3l-2.5 2.4zM3.85 18.7l2.525-2.425L7.75 17.6l-2.425 2.525z"
+            ></path>
+          </svg>
+        </div>
       </div>
     </header>
     <main>
@@ -42,12 +74,10 @@
         <article>
           <h2>Fundamentos</h2>
           <hr />
-          
+
           <fieldset id="basic-git">
             <legend>1. Basic Git</legend>
-            <h3
-            >Notas de la sesión</h3
-              >
+            <h3>Notas de la sesión</h3>
             <h4>Git</h4>
             <ul>
               <li>
@@ -70,9 +100,7 @@
                 verdad.
               </li>
             </ul>
-            <h3
-            >Comandos útiles</h3
-              >
+            <h3>Comandos útiles</h3>
             <ul>
               <li>
                 <span class="codeLine">git clone "URL-del-repositorio"</span>
@@ -107,9 +135,7 @@
               </li>
             </ul>
 
-            <h3
-            >Enlaces</h3
-              >
+            <h3>Enlaces</h3>
             <ul>
               <li>
                 <a href="https://git-scm.com/" target="_blank">Git homepage</a>
@@ -119,9 +145,7 @@
 
           <fieldset id="html-1">
             <legend>2. HTML and CSS I</legend>
-            <h3
-            >Notas de la sesión</h3
-              >
+            <h3>Notas de la sesión</h3>
             <h4>HTML</h4>
 
             <ul>
@@ -185,9 +209,7 @@
               </li>
             </ul>
 
-            <h3
-            >Enlaces</h3
-              >
+            <h3>Enlaces</h3>
             <ul>
               <li>
                 <a href="https://developer.mozilla.org/en-US/" target="_blank"
@@ -209,9 +231,7 @@
 
           <fieldset id="html-2">
             <legend>3. HTML and CSS II</legend>
-            <h3
-            >Notas de la sesión</h3
-              >
+            <h3>Notas de la sesión</h3>
             <h4>Contenido incrustado</h4>
             <ul>
               <li>
@@ -470,9 +490,7 @@
                 al elemento a con el elemento b como ancestro directo.
               </li>
             </ul>
-            <h3
-            >Enlaces</h3
-              >
+            <h3>Enlaces</h3>
             <ul>
               <li>
                 <a
@@ -514,9 +532,7 @@
 
           <fieldset id="html-3">
             <legend>4. HTML and CSS III</legend>
-            <h3
-            >Notas de la sesión</h3
-              >
+            <h3>Notas de la sesión</h3>
             <h4>Pseudo clases y elementos</h4>
             <p>
               Hacen referencia a elementos y clases que vienen
@@ -667,9 +683,7 @@ nav#menu li#top      /* (0, 2, 0, 2) */
               </li>
             </ul>
 
-            <h3
-            >Enlaces</h3
-              >
+            <h3>Enlaces</h3>
             <ul>
               <li>
                 <a
@@ -704,9 +718,7 @@ nav#menu li#top      /* (0, 2, 0, 2) */
 
           <fieldset id="ts-basics">
             <legend>5. TypeScript Basics</legend>
-            <h3
-            >Notas de la sesión</h3
-              >
+            <h3>Notas de la sesión</h3>
             <p>
               <span class="important">TypeScript</span> es una capa por
               <span class="important"> encima de JavaScript.</span> Proporciona
@@ -715,9 +727,10 @@ nav#menu li#top      /* (0, 2, 0, 2) */
             </p>
             <ul>
               <li>
-                TypeScript aporta una <span class="important">comprobación estática</span> del programa
-                en tiempo de compilación. También muestra posibles maneras de
-                completar campos, métodos o parámetros.
+                TypeScript aporta una
+                <span class="important">comprobación estática</span> del
+                programa en tiempo de compilación. También muestra posibles
+                maneras de completar campos, métodos o parámetros.
               </li>
               <li>
                 Los <span class="important">tipos</span> en TypeScript son
@@ -770,9 +783,7 @@ nav#menu li#top      /* (0, 2, 0, 2) */
                 >
               </li>
             </ul>
-            <h3
-            >Enlaces</h3
-              >
+            <h3>Enlaces</h3>
             <ul>
               <li>
                 <a href="https://www.typescriptlang.org/" target="_blank"
@@ -791,12 +802,10 @@ nav#menu li#top      /* (0, 2, 0, 2) */
               </li>
             </ul>
           </fieldset>
-          
+
           <fieldset id="ts-objects">
             <legend>6. Objects</legend>
-            <h3
-            >Notas de la sesión</h3
-              >
+            <h3>Notas de la sesión</h3>
             <h4>Objetos</h4>
             <ul>
               <li>Representación de un concepto y sus propiedades</li>
@@ -869,8 +878,11 @@ let coord={
                 TypeScript ya lo infiera por sí mismo.
               </li>
               <li>
-                Podemos <span class="important">definir nuestras estructuras de tipos</span> para
-                reaprovecharlas.
+                Podemos
+                <span class="important"
+                  >definir nuestras estructuras de tipos</span
+                >
+                para reaprovecharlas.
               </li>
               <pre class="codeBlock">
 type coord2d ={
@@ -878,14 +890,19 @@ type coord2d ={
     y: number
 }
               </pre>
-              <li>Con el operador <span class="codeLine">?</span> marcaremos <span class="important">campos como opcionales.</span></li>
               <li>
-                Podemos usar el operador <span class="codeLine">|</span> para <span class="important">especificar varios tipos</span>
+                Con el operador <span class="codeLine">?</span> marcaremos
+                <span class="important">campos como opcionales.</span>
+              </li>
+              <li>
+                Podemos usar el operador <span class="codeLine">|</span> para
+                <span class="important">especificar varios tipos</span>
                 posibles, incluyendo undefined.
               </li>
               <li>
-                <span class="important">Interface</span>: Identifica una serie de propiedades como un elemento,
-                pero obteniéndolas por métodos como los getter.
+                <span class="important">Interface</span>: Identifica una serie
+                de propiedades como un elemento, pero obteniéndolas por métodos
+                como los getter.
               </li>
               <li>
                 Podemos marcar propiedades como readonly para evitar
@@ -902,10 +919,14 @@ let person : {
             <h4></h4>
             <h4>Arrays</h4>
             <ul>
-              <li><span class="important">Secuencia</span>
-              </span> de elementos, cada uno con un <span class="important">índice único.</span>
-            </span></li>
-              <li><span class="codeLine">a[0]</span> - elemento en posición 0 del array a.</li>
+              <li>
+                <span class="important">Secuencia</span> de elementos, cada uno
+                con un <span class="important">índice único.</span>
+              </li>
+              <li>
+                <span class="codeLine">a[0]</span> - elemento en posición 0 del
+                array a.
+              </li>
             </ul>
             <h4>Iterar en arrays</h4>
             <p>
@@ -951,9 +972,7 @@ for(let elem of array){
                 >
               </li>
             </ul>
-            <h3
-            >Enlaces</h3
-              >
+            <h3>Enlaces</h3>
             <ul>
               <li>
                 <a
@@ -972,9 +991,7 @@ for(let elem of array){
 
           <fieldset id="advanced-functions">
             <legend>7. Advanced Functions</legend>
-            <h3
-            >Notas de la sesión</h3
-              >
+            <h3>Notas de la sesión</h3>
             <h4>Funciones de primera clase</h4>
             <ul>
               <li>
@@ -1016,9 +1033,7 @@ for(let elem of array){
               <li><span class="codeLine">groucho.sayHi.bind(Chicco)</span></li>
             </ul>
 
-            <h3
-            >Arrow functions</h3
-              >
+            <h3>Arrow functions</h3>
             <ul>
               <li>
                 Notación corta para definir funciones. Normalmente tienen
@@ -1039,9 +1054,7 @@ for(let elem of array){
               </li>
             </ul>
 
-            <h3
-            >Arrow functions methods</h3
-              >
+            <h3>Arrow functions methods</h3>
 
             <p>
               <span class="important"
@@ -1108,9 +1121,7 @@ for(let elem of array){
               </li>
             </ul>
 
-            <h3
-            >Closures / Contexto léxico</h3
-              >
+            <h3>Closures / Contexto léxico</h3>
             <ul>
               <li>
                 <span class="important">Jerarquía de entornos </span> basados en
@@ -1127,9 +1138,7 @@ for(let elem of array){
 
           <fieldset id="classes">
             <legend>8. Classes</legend>
-            <h3
-            >Notas de la sesión</h3
-              >
+            <h3>Notas de la sesión</h3>
             <p>
               <span class="important"> Clase</span>: Definición de un tipo de
               Objeto. Contiene campos y métodos.
@@ -1254,9 +1263,7 @@ for(let elem of array){
               y devolver diferentes objetos error en base a éstos.
             </p>
 
-            <h3
-            >Enlaces</h3
-              >
+            <h3>Enlaces</h3>
             <ul>
               <li>
                 <a
@@ -1294,15 +1301,11 @@ for(let elem of array){
 
           <fieldset id="async">
             <legend>9. Asynchrony</legend>
-            <h3
-            >Notas de la sesión</h3
-              >
+            <h3>Notas de la sesión</h3>
             <ul>
               <li>Lorem Ipsum</li>
             </ul>
-            <h3
-            >Enlaces</h3
-              >
+            <h3>Enlaces</h3>
             <ul>
               <li>Lorem Ipsum</li>
             </ul>
@@ -1310,15 +1313,11 @@ for(let elem of array){
 
           <fieldset id="modules">
             <legend>10. Modules</legend>
-            <h3
-            >Notas de la sesión</h3
-              >
+            <h3>Notas de la sesión</h3>
             <ul>
               <li>Lorem Ipsum</li>
             </ul>
-            <h3
-            >Enlaces</h3
-              >
+            <h3>Enlaces</h3>
             <ul>
               <li>Lorem Ipsum</li>
             </ul>

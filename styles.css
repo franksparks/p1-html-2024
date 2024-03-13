@@ -6,6 +6,11 @@
   --important-color: red;
   --code-color: green;
 }
+.day-mode {
+  --font-color: black;
+  --background-color: white;
+  --border-color: black;
+}
 
 body {
   background-color: var(--background-color);
@@ -72,6 +77,15 @@ header {
   margin-right: 1em;
 }
 
+.headerIcons {
+  cursor: pointer;
+  margin: 1em;
+}
+
+.hidden {
+  display: none;
+}
+
 a,
 a:visited,
 a:hover,
@@ -101,6 +115,10 @@ nav {
 nav ul li ul li {
   font-style: normal;
   margin: 0.8em 0px;
+}
+
+.non-selection {
+  user-select: none;
 }
 
 section {
@@ -133,7 +151,6 @@ fieldset ul li {
 
 .codeLine,
 .codeBlock {
-  color: var(--border-color);
   border: 3px var(--code-color) solid;
   font-family: monospace;
 }

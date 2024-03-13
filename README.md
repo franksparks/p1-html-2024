@@ -1,3 +1,29 @@
+# Práctica 1 del Posgrado Full-Stack Web Technologies, por Ferran Bals
+
+## Proyecto: Página estática de apuntes del posgrado
+
+### Acerca del autor
+
+**Autor**: Ferran Bals Moreno
+
+**Perfil de GitHub:** [franksparks](https://github.com/franksparks)
+
+### Notas sobre el uso de JavaScript
+Se ha utilizado JavaScript con dos objetivos:
+
+* Generar el índice dinámicamente en función de la estructura HTML del body.
+  * Esto nos ahorra tener que editarlo manualmente a medida que se añadan sesiones. 
+  * También se añade el id de la sesión a la URL para redirigir la página a la sesión seleccionada.
+
+* Gestionar las clases involucradas al cambiar entre los modos día/noche.
+
+
+### Página desplegada
+
+La página se ha desplegado con Vercel y se puede visitar en el siguiente [enlace](https://ferran-bals-posgrado-pr1.vercel.app/).
+
+
+___
 # Enunciado original
 
 ## Página HTML estática
@@ -20,16 +46,3 @@ Para hacer esta práctica tienes que:
 - Trabajar en tu _fork_ haciendo commits regularmente (una práctica que aparece entera en un solo commit tendrá una nota muy baja o cero, hay que enseñar el proceso intermedio).
 - Al finalizar, descarga un ZIP y entrega en el Campus Online de UPC School (habrá una tarea para ello).
 
-# Práctica 1
-
-## Página estática de apuntes del posgrado Full-Stack Web Technologies
-
-### Acerca del autor
-
-**Autor**: Ferran Bals Moreno
-
-**Perfil de GitHub:** [franksparks](https://github.com/franksparks)
-
-### Página desplegada
-
-La página se ha desplegado con Vercel y se puede visitar en el siguiente [enlace](https://ferran-bals-posgrado-pr1.vercel.app/).
